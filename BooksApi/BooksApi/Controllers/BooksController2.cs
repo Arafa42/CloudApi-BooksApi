@@ -33,7 +33,7 @@ namespace BooksApi.Controllers
 
             if (!string.IsNullOrWhiteSpace(genre))
             {
-                query = query.Where(d => d.Genre == genre);
+                query = query.Where(d => d.Categories == genre);
             }
             if (!string.IsNullOrWhiteSpace(title))
             {
@@ -96,7 +96,7 @@ namespace BooksApi.Controllers
         {
 
             var book = context.Books
-                .Include(d => d.Author)
+                .Include(d => d.Authors)
                 .SingleOrDefault(d => d.Id == id);
 
 
@@ -144,7 +144,7 @@ namespace BooksApi.Controllers
             orgBook.Title = updateBook.Title;
             orgBook.Pages = updateBook.Pages;
             orgBook.ISBN = updateBook.ISBN;
-            orgBook.Genre = updateBook.Genre;
+            orgBook.Categories = updateBook.Categories;
           
 
             context.SaveChanges();

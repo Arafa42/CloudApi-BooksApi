@@ -16,7 +16,7 @@ namespace BooksApi
         [StringLength(999)]
         public string Title { get; set; }
 
-        [Required]
+       
         public string ISBN { get; set; } 
 
         [Required]
@@ -27,13 +27,19 @@ namespace BooksApi
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
         [Required]
         [StringLength(999)]
-        public string Genre { get; set; }
+        public string Categories { get; set; }
 
 
         [StringLength(500)]
         [JsonIgnore]
-        public Author Author { get; set; }
+        public Author Authors { get; set; }
 
+
+        public string PublishedDate { get; set; }
+        public string ThumbnailURL { get; set; }
+        public string ShortDescription { get; set; }
+        public string LongDescription { get; set; }
+        public string Status { get; set; }
 
     }
 }
