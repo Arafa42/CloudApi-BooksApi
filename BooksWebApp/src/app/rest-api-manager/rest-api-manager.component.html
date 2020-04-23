@@ -1,0 +1,42 @@
+<p>rest-api-manager works!</p>
+<input type="number" class="form-control" [(ngModel)] = 'fetchId' placeholder="Enter User ID to fetch" />
+<button class="btn btn-info" (click)= 'GetById()'>Fetch user</button>
+
+
+
+<table class ="table" border="2px solid black">
+    <tr>
+      <td>
+        {{boeks.id}}
+      </td>
+      <td>
+        {{boeks.title}}
+      </td>
+      <td>
+        {{boeks.shortDescription}}
+      </td>
+    </tr>
+  </table>
+
+<p></p>
+
+<br><br>
+
+<table class ="table table-striped table-responsive">
+  <tr *ngFor="let u of boeks2">
+    <td>
+      {{u.id}}
+    </td>
+    <td>
+      {{u.name}}
+    </td>
+    <td>
+      {{u.model}}
+    </td>
+
+  </tr>
+</table>
+
+<input class= "form-control" type="number" [(ngModel)]='idtodelete' placeholder="Enter Id to delete User" />
+
+<button class= 'btn btn-info' (click)='DeleteBooks()'>Delete User </button>

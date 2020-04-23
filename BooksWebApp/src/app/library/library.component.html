@@ -1,0 +1,41 @@
+<h1 style="text-align: center;"><b>REST API LIBRARY</b></h1>
+<p></p>
+
+
+
+
+   
+
+
+    <p-table [value]="boeks">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Cover</th>
+                <th>Categories</th>                
+                <th>ShortDescription</th>
+                <th>Published Date</th>
+                <th>Status</th>
+                <th>ISBN</th>
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-boeken >
+            <tr >
+                <td>{{boeken.id}}</td>
+                <td>{{boeken.title}}</td>
+                <td><img src="{{boeken.thumbnailURL}}"></td>
+                <td>{{boeken.categories}}</td>
+                <td>{{boeken.shortDescription}}</td>            
+                <td>{{boeken.publishedDate}}</td>   
+                <td>{{boeken.status}}</td>
+                <td>{{boeken.isbn}}</td>
+
+  
+            </tr>
+        </ng-template>
+    </p-table>
+
+<p></p>
+
