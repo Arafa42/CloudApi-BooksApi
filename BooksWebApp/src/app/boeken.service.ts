@@ -43,7 +43,13 @@ GetById (id: number): Observable<IBoek> {
   }
 
 
+  AddBooks (user: IBoek): Observable<IBoek> {
+   
+    return this.http.post<IBoek>(this.apiurl, user, this.httpOptions).pipe(
+      tap(data => console.log(data)),
 
+    );
+}
 
 
 

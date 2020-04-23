@@ -78,3 +78,32 @@
 
 <p></p>
 <h1><b>CREATE</b></h1>
+
+
+<form [formGroup]='userFormGroup' (ngSubmit)='AddBooks()'  novalidate >
+    <input class= "form-control" type="text" formControlName='title' placeholder="Enter title"   />
+    <input class= "form-control" type="text" formControlName='categories' placeholder="Enter category"   />
+    <input class= "form-control" type="text" formControlName='pages' placeholder="Enter pages"   />
+
+  
+    <button class= 'btn btn-info'>Add User</button></form>
+  
+    <br><br>
+    <table class ="table table-striped table-responsive2">
+      <tr *ngFor="let u of boeks2">
+        <td>
+          {{u.id}}
+        </td>
+        <td>
+          {{u.title}}
+        </td>
+        <td>
+          {{u.categories}}
+        </td>
+        <td>
+            {{u.pages}}
+          </td>
+    
+
+      </tr>
+    </table>

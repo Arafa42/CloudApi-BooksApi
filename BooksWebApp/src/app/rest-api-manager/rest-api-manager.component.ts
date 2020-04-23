@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BoekenService, IBoek } from '../boeken.service';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-rest-api-manager',
@@ -9,8 +10,9 @@ import { BoekenService, IBoek } from '../boeken.service';
 export class RestApiManagerComponent implements OnInit {
 
 boeks:IBoek;
-boeks2:IBoek[];
+boeks2:IBoek[]=[];
 displayData: boolean;
+userFormGroup: FormGroup;
 
   fetchId : number = 1;
   idtodelete: number = 0;
@@ -50,8 +52,41 @@ displayData: boolean;
     }
 
 
-  ngOnInit() {
+    AddBooks() {
+      this.boekSvc.AddBooks(this.userFormGroup.value).subscribe(data => {
+        this.boeks = data;
+        console.log(this.boeks);
+      });
+      this.GetAllBooks();
+    }
 
+
+    GetAllBooks(){
+
+      this.boekSvc.GetBooks().subscribe(boeken => {
+
+        this.boeks2.length = boeken.length;
+      for (let i = 0; i < boeken.length; i++) {
+        this.boeks2[i] = boeken[i];
+      }
+    
+      });
+      
+    }
+
+
+    
+
+  ngOnInit() {
+    this.userFormGroup = new FormGroup(
+      {
+        title : new FormControl(''),
+        categories : new FormControl(''),
+        pages:new FormControl('')
+      },
+    );
+
+    this.GetAllBooks();
     this.GetById();
     this.GetBooks();
     this.DeleteBooks();

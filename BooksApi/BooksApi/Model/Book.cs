@@ -21,7 +21,7 @@ namespace BooksApi
 
         [Required]
         [Range(1,99999)]
-        public int Pages { get; set; }
+        public string Pages { get; set; }
         
        
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
