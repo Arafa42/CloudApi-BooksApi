@@ -5,17 +5,13 @@ pipeline {
       steps {
         echo 'Checkout master branch'
         checkout scm
-        cd('BooksWebApp') {
-          sh 'npm install'
-        }
+        sh 'npm install'
       }
     }
     stage('Build') {
       steps {
-        echo 'Building..'
-        cd('webapp') {
-          sh 'npm run ng -- build --prod --baseHref=/BooksWebApp/ -optimization=true'
-        }
+        echo 'Building..'       
+        sh 'npm run ng -- build --prod --baseHref=/BooksWebApp/ -optimization=true'       
       }
     }
     stage('Deploy') {
