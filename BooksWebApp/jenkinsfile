@@ -15,12 +15,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm test BooksWebApp'
+                sh 'cd BooksWebApp && npm test'
             }
         }        
         stage('Deploy') {
             steps {
-                sh ''
+                
             }
         }             
     }
