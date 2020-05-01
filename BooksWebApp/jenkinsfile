@@ -1,7 +1,9 @@
 pipeline {
     agent any
     tools {nodejs "NodeJS"}
-     
+    dir("folder") {
+        sh "cd BooksWebApp"
+            }
     stages {
         stage('Restore') {
             steps {
@@ -15,7 +17,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm test'
+                sh '/npm test'
             }
         }        
         stage('Deploy') {
