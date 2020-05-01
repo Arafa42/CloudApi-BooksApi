@@ -31,7 +31,7 @@ namespace BooksApi
 
 
         [StringLength(500)]
-        [JsonIgnore]
+     
         public Author Authors { get; set; }
 
 

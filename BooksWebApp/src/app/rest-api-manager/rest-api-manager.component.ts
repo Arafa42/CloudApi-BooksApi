@@ -10,6 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class RestApiManagerComponent implements OnInit {
 
 boeks:IBoek;
+boeksTest:IBoek;
 boeks2:IBoek[]=[];
 displayData: boolean;
 userFormGroup: FormGroup;
@@ -45,6 +46,7 @@ userFormGroup: FormGroup;
     UpdateBooks() {
       this.boekSvc.GetById(this.idtoUpdate).subscribe(data => {
         this.boeks = data;
+        this.boeks.status = "UPDATED";
         this.boekSvc.UpdateBooks(this.boeks).subscribe(data1 => {
           this.GetBooks();
         });

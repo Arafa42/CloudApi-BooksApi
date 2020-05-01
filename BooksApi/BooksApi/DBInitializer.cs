@@ -1215,12 +1215,7 @@ namespace BooksApi
 
 
 
-
-
-
                 ////Authors
-
-
 
 
                 var author1 = new Author()
@@ -1234,8 +1229,8 @@ namespace BooksApi
 
 
                 author1.Books = new List<Book>();
-                //author1.Books.Add(book1);
-                //author1.Books.Add(book2);
+                author1.Books.Add(books[0]);
+                author1.Books.Add(books[1]);
 
                 context.Authors.Add(author1);
 

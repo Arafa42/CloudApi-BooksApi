@@ -109,7 +109,23 @@ namespace BooksApi.Controllers
 
 
 
+        [Route("{id}/authors")]
+        [HttpGet]
 
+        public IActionResult GetAuthors(int id)
+        {
+
+            var book = context.Books
+                .Include(d => d.Authors)
+                .SingleOrDefault(d => d.Id == id);
+
+
+            if (book == null)
+            {
+                return NotFound();
+            }
+            return Ok(book.Authors);
+        }
 
 
 
@@ -145,7 +161,12 @@ namespace BooksApi.Controllers
             orgBook.Pages = updateBook.Pages;
             orgBook.ISBN = updateBook.ISBN;
             orgBook.Categories = updateBook.Categories;
-          
+            orgBook.Status = updateBook.Status;
+            orgBook.ShortDescription = updateBook.ShortDescription;
+            orgBook.LongDescription = updateBook.LongDescription;
+            orgBook.ThumbnailURL = updateBook.ThumbnailURL;
+            
+
 
             context.SaveChanges();
             return Ok(orgBook);
