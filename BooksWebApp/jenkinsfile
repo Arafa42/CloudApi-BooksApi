@@ -1,22 +1,25 @@
+
 pipeline {
-   agent any
-      environment {
-         PATH='/usr/local/bin:/usr/bin:/bin'
-      }
-   stages {
-      stage('NPM Setup') {
-      steps {
-         sh 'npm install'
-      }
-   }
 
-
-   stage('Stage Web Build') {
-      steps {
-        sh 'npm run build --prod'
+    agent {
+        docker {
+            image 'node'
+            args '-u root'
+        }
     }
-  }
 
-
- }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                sh 'npm install'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                sh 'npm test'
+            }
+        }
+    }
 }
