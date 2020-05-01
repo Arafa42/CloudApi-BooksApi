@@ -1,22 +1,23 @@
 pipeline {
     agent any
     tools {nodejs "NodeJS"}
-    dir("folder") {
-        sh "cd BooksWebApp"
-            }
+    
     stages {
         stage('Restore') {
             steps {
+                sh 'cd BooksWebApp'
                 sh 'npm install'
             }
         }
         stage('Build') {
             steps {
+                sh 'cd BooksWebApp'
                 sh 'npm build'
             }
         }
         stage('Test') {
             steps {
+                sh 'cd BooksWebApp'
                 sh '/npm test'
             }
         }        
