@@ -1,23 +1,26 @@
 pipeline {
     agent any
-    tools {nodejs "NodeJS"}
+    agent {
+      node {
+        customWorkspace '/var/jenkins_home/CloudApi-BooksApi/BooksWebApp'
+           }
+        }
+   
+   tools {nodejs "NodeJS"}
     
     stages {
         stage('Restore') {
             steps {
-                sh 'cd BooksWebApp'
                 sh 'npm install'
             }
         }
         stage('Build') {
             steps {
-                sh 'cd BooksWebApp'
                 sh 'npm build'
             }
         }
         stage('Test') {
             steps {
-                sh 'cd BooksWebApp'
                 sh '/npm test'
             }
         }        
