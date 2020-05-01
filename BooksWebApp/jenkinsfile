@@ -1,56 +1,56 @@
-properties(
-    [
-        [$class: 'BuildDiscarderProperty', strategy:
-          [$class: 'LogRotator', artifactDaysToKeepStr: '14', artifactNumToKeepStr: '5', daysToKeepStr: '30', numToKeepStr: '60']],
-        pipelineTriggers(
-          [
-              pollSCM('H/15 * * * *'),
-              cron('@daily'),
-          ]
-        )
-    ]
-)
-node {
-    stage('Checkout') {
-        //disable to recycle workspace data to save time/bandwidth
-        deleteDir()
-        checkout scm
+pipeline {
+   agent any
+      environment {
+         PATH='/usr/local/bin:/usr/bin:/bin'
+      }
+   stages {
+      stage('NPM Setup') {
+      steps {
+         sh 'npm install'
+      }
+   }
 
-        //enable for commit id in build number
-        //env.git_commit_id = sh returnStdout: true, script: 'git rev-parse HEAD'
-        //env.git_commit_id_short = env.git_commit_id.take(7)
-        //currentBuild.displayName = "#${currentBuild.number}-${env.git_commit_id_short}"
-    }
+   stage('IOS Build') {
+   steps {
+      sh 'ionic cordova build ios --release'
+     } 
+  }
 
-    stage('NPM Install') {
-        withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
-            sh 'npm install'
-        }
-    }
+   stage('Android Build') {
+   steps {
+      sh 'ionic cordova build android --release'
+   }
+  }
 
-    stage('Test') {
-        withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
-          sh 'ng test --progress=false --watch false'
-        }
-        junit '**/test-results.xml'
-    }
+   stage('APK Sign') {
+   steps {
+      sh 'jarsigner -storepass your_password -keystore keys/yourkey.keystore platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk nameApp'
+   }
+   }
 
-    stage('Lint') {
-        sh 'ng lint'
+   stage('Stage Web Build') {
+      steps {
+        sh 'npm run build --prod'
     }
+  }
 
-    stage('Build') {
-        milestone()
-        sh 'ng build --prod --aot --sm --progress=false'
-    }
+   stage('Publish Firebase Web') {
+      steps {
+      sh 'firebase deploy --token "Your Token Key"'
+   }
+  }
 
-    stage('Archive') {
-        sh 'tar -cvzf dist.tar.gz --strip-components=1 dist'
-        archive 'dist.tar.gz'
+   stage('Publish iOS') {
+      steps {
+       echo "Publish iOS Action"
     }
+   }
 
-    stage('Deploy') {
-        milestone()
-        echo "Deploying..."
-    }
+   stage('Publish Android') {
+     steps {
+    echo "Publish Android API Action"
+   }
+  }
+
+ }
 }
