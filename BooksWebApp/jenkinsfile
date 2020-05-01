@@ -1,12 +1,10 @@
 node {
-  stage{"checkout scm"}{
-      git branch: 'SP2', url: 'git@github.com:Arafa42/CloudApi-BooksApi.git'
-  
-  }
+
   stage{"install node modules"}{
       sh 'npm install'
   
   }
+  
   stage{"test"}{
       sh 'ng test'
   
