@@ -16,5 +16,8 @@ namespace BooksApi.Model
       
         public ICollection<Book> Books { get; set; }
 
+        [JsonIgnore]
+        public ICollection<BooksAuthor> MultipleBooks { get; set; }
+
     }
 }

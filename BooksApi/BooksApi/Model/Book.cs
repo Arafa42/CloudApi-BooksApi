@@ -29,15 +29,18 @@ namespace BooksApi
         public string Categories { get; set; }
 
         [StringLength(500)]
-     
+    
         public Author Authors { get; set; }
-
-
         public string PublishedDate { get; set; }
         public string ThumbnailURL { get; set; }
         public string ShortDescription { get; set; }
         public string LongDescription { get; set; }
         public string Status { get; set; }
+
+
+        [JsonIgnore]
+        public ICollection<BooksAuthor> MultipleAuthors { get; set; }
+
 
     }
 }

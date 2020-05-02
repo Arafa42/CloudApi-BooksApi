@@ -16,6 +16,32 @@ namespace BooksApi
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
 
+        public DbSet<BooksAuthor> BooksAuthor { get; set; }
+
+
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+
+            modelBuilder.Entity<BooksAuthor>()
+                .HasKey(b => new { b.BookID, b.AuthorID });
+
+            modelBuilder.Entity<BooksAuthor>()
+                .HasOne(d => d.Book)
+                .WithMany(p => p.MultipleAuthors)
+                .HasForeignKey(d => d.BookID);
+
+            modelBuilder.Entity<BooksAuthor>()
+                .HasOne(d => d.Author)
+                .WithMany(t => t.MultipleBooks)
+                .HasForeignKey(d => d.AuthorID);
+
+
+        }
+
 
 
     }

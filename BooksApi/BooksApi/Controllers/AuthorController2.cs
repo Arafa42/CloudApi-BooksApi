@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using BooksApi.Model;
 using Microsoft.AspNetCore.Mvc;
@@ -59,6 +60,28 @@ namespace BooksApi.Controllers
                 }
                 return Ok(author);
             }
+
+
+
+
+        [Route("{id}/books")]
+        [HttpGet]
+
+        public IActionResult MultipleBooks(int id)
+        {
+            var authorsWithBooks = context.Authors.Include(c => c.MultipleBooks).ThenInclude(row => row.Book).First(c => c.Id == id);
+            var multipleBooks = authorsWithBooks.MultipleBooks.Select(row => row.Book);
+
+
+            if(multipleBooks == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(multipleBooks);
+
+        }
+
 
 
         //[Route("{id}/books")]

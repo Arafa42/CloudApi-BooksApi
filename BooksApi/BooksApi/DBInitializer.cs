@@ -18,8 +18,8 @@ namespace BooksApi
 
 
             context.Database.EnsureCreated();
-           
-            
+
+
             if (!context.Books.Any())
             {
 
@@ -27,21 +27,21 @@ namespace BooksApi
                 //BOOKS
 
 
-                  books.Add(new Book()
-                    {
-                    Title= "Unlocking Android",
-                    ISBN= "1933988673",
-                    Pages= "416",
-                    PublishedDate=  "2009-04-01",
-                    ThumbnailURL= "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg",
-                    ShortDescription= "Unlocking Android= A Developer's Guide provides concise, hands-on instruction for the Android operating system and development tools. This book teaches important architectural concepts in a straightforward writing style and builds on this with practical and useful examples throughout.",
-                    LongDescription= "Android is an open source mobile phone platform based on the Linux operating system and developed by the Open Handset Alliance, a consortium of over 30 hardware, software and telecom companies that focus on open standards for mobile devices. Led by search giant, Google, Android is designed to deliver a better and more open and cost effective mobile experience.    Unlocking Android= A Developer's Guide provides concise, hands-on instruction for the Android operating system and development tools. This book teaches important architectural concepts in a straightforward writing style and builds on this with practical and useful examples throughout. Based on his mobile development experience and his deep knowledge of the arcane Android technical documentation, the author conveys the know-how you need to develop practical applications that build upon or replace any of Androids features, however small.    Unlocking Android= A Developer's Guide prepares the reader to embrace the platform in easy-to-understand language and builds on this foundation with re-usable Java code examples. It is ideal for corporate and hobbyists alike who have an interest, or a mandate, to deliver software functionality for cell phones.    WHAT'S INSIDE=        * Android's place in the market      * Using the Eclipse environment for Android development      * The Intents - how and why they are used      * Application classes=            o Activity            o Service            o IntentReceiver       * User interface design      * Using the ContentProvider to manage data      * Persisting data with the SQLite database      * Networking examples      * Telephony applications      * Notification methods      * OpenGL, animation & multimedia      * Sample Applications  ",
-                    Status= "PUBLISH",
+                books.Add(new Book()
+                {
+                    Title = "Unlocking Android",
+                    ISBN = "1933988673",
+                    Pages = "416",
+                    PublishedDate = "2009-04-01",
+                    ThumbnailURL = "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg",
+                    ShortDescription = "Unlocking Android= A Developer's Guide provides concise, hands-on instruction for the Android operating system and development tools. This book teaches important architectural concepts in a straightforward writing style and builds on this with practical and useful examples throughout.",
+                    LongDescription = "Android is an open source mobile phone platform based on the Linux operating system and developed by the Open Handset Alliance, a consortium of over 30 hardware, software and telecom companies that focus on open standards for mobile devices. Led by search giant, Google, Android is designed to deliver a better and more open and cost effective mobile experience.    Unlocking Android= A Developer's Guide provides concise, hands-on instruction for the Android operating system and development tools. This book teaches important architectural concepts in a straightforward writing style and builds on this with practical and useful examples throughout. Based on his mobile development experience and his deep knowledge of the arcane Android technical documentation, the author conveys the know-how you need to develop practical applications that build upon or replace any of Androids features, however small.    Unlocking Android= A Developer's Guide prepares the reader to embrace the platform in easy-to-understand language and builds on this foundation with re-usable Java code examples. It is ideal for corporate and hobbyists alike who have an interest, or a mandate, to deliver software functionality for cell phones.    WHAT'S INSIDE=        * Android's place in the market      * Using the Eclipse environment for Android development      * The Intents - how and why they are used      * Application classes=            o Activity            o Service            o IntentReceiver       * User interface design      * Using the ContentProvider to manage data      * Persisting data with the SQLite database      * Networking examples      * Telephony applications      * Notification methods      * OpenGL, animation & multimedia      * Sample Applications  ",
+                    Status = "PUBLISH",
                     //Authors =  "W. Frank Ableson, Charlie Collins, Robi Sen",
                     Categories = "Open Source, Mobile",
-                    });
+                });
 
-                  books.Add(new Book()
+                books.Add(new Book()
                 {
                     Title = "Android in Action, Second Edition",
                     ISBN = "1935182722",
@@ -54,7 +54,7 @@ namespace BooksApi
                     //Authors= "W. Frank Ableson", "Robi Sen",
                     Categories = "Java"
                 });
-                  books.Add(new Book()
+                books.Add(new Book()
 
                 {
                     Title = "Specification by Example",
@@ -67,7 +67,7 @@ namespace BooksApi
                     Categories = "Software Engineering"
                 });
 
-                  books.Add(new Book()
+                books.Add(new Book()
 
                 {
                     Title = "Flex 3 in Action",
@@ -81,7 +81,7 @@ namespace BooksApi
                     Categories = "Internet"
                 });
 
-                  books.Add(new Book()
+                books.Add(new Book()
 
                 {
                     Title = "Flex 4 in Action",
@@ -95,7 +95,7 @@ namespace BooksApi
                     Categories = "Internet"
                 });
 
-                  books.Add(new Book()
+                books.Add(new Book()
 
                 {
                     Title = "Collective Intelligence in Action",
@@ -109,7 +109,7 @@ namespace BooksApi
                     Categories = "Internet"
                 });
 
-                  books.Add(new Book()
+                books.Add(new Book()
 
                 {
                     Title = "Zend Framework in Action",
@@ -1089,7 +1089,7 @@ namespace BooksApi
                 });
 
                 books.Add(new Book()
-                
+
                 {
                     Title = "Pool and DBCP= Creating and Using Object Pools",
                     ISBN = "1932394524i-e",
@@ -1243,7 +1243,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
-                  
+
                     Name = "Harms",
                     FirstName = "Daryl",
                     Birth = ""
@@ -1272,7 +1272,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
-                   
+
                     Name = "Hall",
                     FirstName = "Richard S.",
                     Birth = ""
@@ -1307,7 +1307,7 @@ namespace BooksApi
 
                 });
                 authors.Add(new Author()
-                { 
+                {
                     Name = "Smith",
                     FirstName = "Glen",
                     Birth = ""
@@ -1328,7 +1328,7 @@ namespace BooksApi
 
                 });
                 authors.Add(new Author()
-                { 
+                {
                     Name = "Grayson",
                     FirstName = "John E.",
                     Birth = ""
@@ -1363,7 +1363,7 @@ namespace BooksApi
 
                 });
                 authors.Add(new Author()
-                {   
+                {
                     Name = "Dossot",
                     FirstName = "David",
                     Birth = ""
@@ -1391,7 +1391,7 @@ namespace BooksApi
 
                 });
                 authors.Add(new Author()
-                {             
+                {
                     Name = "Deshmukh",
                     FirstName = "Hanumant",
                     Birth = ""
@@ -1433,7 +1433,7 @@ namespace BooksApi
 
                 });
                 authors.Add(new Author()
-                {         
+                {
                     Name = "DeLia",
                     FirstName = "Tony",
                     Birth = ""
@@ -1468,7 +1468,7 @@ namespace BooksApi
 
                 });
                 authors.Add(new Author()
-                {  
+                {
                     Name = "Brown",
                     FirstName = "Donald",
                     Birth = ""
@@ -1496,7 +1496,7 @@ namespace BooksApi
 
                 });
                 authors.Add(new Author()
-                {  
+                {
                     Name = "Dashorst",
                     FirstName = "Martijn",
                     Birth = ""
@@ -1510,7 +1510,7 @@ namespace BooksApi
 
                 });
                 authors.Add(new Author()
-                {   
+                {
                     Name = "Crane",
                     FirstName = "Dave",
                     Birth = ""
@@ -1538,10 +1538,10 @@ namespace BooksApi
 
                 });
                 authors.Add(new Author()
-                {   
- 
-         
- 
+                {
+
+
+
                     Name = "Cockayne",
                     FirstName = "William R.",
                     Birth = ""
@@ -1638,7 +1638,7 @@ namespace BooksApi
                     Birth = ""
 
                 }); authors.Add(new Author()
-                {    
+                {
                     Name = "Bochicchio",
                     FirstName = "Daniele",
                     Birth = ""
@@ -1680,7 +1680,7 @@ namespace BooksApi
                     Birth = ""
 
                 }); authors.Add(new Author()
-                {  
+                {
                     Name = "Burnett",
                     FirstName = "Margaret M.",
                     Birth = ""
@@ -1747,7 +1747,7 @@ namespace BooksApi
 
                 });
                 authors.Add(new Author()
-                {   
+                {
                     Name = "Barrilleaux",
                     FirstName = "Jon",
                     Birth = ""
@@ -1771,7 +1771,7 @@ namespace BooksApi
                     Birth = ""
 
                 }); authors.Add(new Author()
-                {    
+                {
                     Name = "Begin",
                     FirstName = "Clinton",
                     Birth = ""
@@ -1806,7 +1806,7 @@ namespace BooksApi
                     FirstName = "John",
                     Birth = ""
 
-                });  authors.Add(new Author()
+                }); authors.Add(new Author()
                 {
                     Name = "Katz",
                     FirstName = "Yehuda",
@@ -1831,7 +1831,7 @@ namespace BooksApi
                     Birth = ""
 
                 }); authors.Add(new Author()
-                {               
+                {
                     Name = "Ableson",
                     FirstName = "W. Frank",
                     Birth = ""
@@ -1918,7 +1918,7 @@ namespace BooksApi
 
                 });
                 authors.Add(new Author()
-                {  
+                {
                     Name = "Allmon",
                     FirstName = "Bernerd",
                     Birth = ""
@@ -1934,7 +1934,7 @@ namespace BooksApi
                 authors.Add(new Author()
                 {
                     Name = "Almiray",
-                    FirstName ="Andres",
+                    FirstName = "Andres",
                     Birth = ""
 
                 });
@@ -1951,7 +1951,7 @@ namespace BooksApi
                     Birth = ""
 
                 }); authors.Add(new Author()
-                {   
+                {
                     Name = "Armstrong",
                     FirstName = "Peter",
                     Birth = ""
@@ -2014,6 +2014,21 @@ namespace BooksApi
                 //author1.Books.Add(books[0]);
                 //author1.Books.Add(books[1]);
                 //context.Authors.Add(author1);
+
+
+
+
+                var relatie1 = new BooksAuthor() { Book = books[0], Author = authors[0] };
+                var relatie2 = new BooksAuthor() { Book = books[1], Author = authors[0] };
+
+
+                authors[0].MultipleBooks = new List<BooksAuthor>() { relatie1, relatie2 };
+
+
+                context.BooksAuthor.Add(relatie1);
+                context.BooksAuthor.Add(relatie2);
+
+
 
 
                 foreach (var item in authors)
