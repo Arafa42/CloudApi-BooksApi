@@ -14,6 +14,8 @@ namespace BooksApi
         public static void Initialize(LibraryContext context)
         {
             List<Book> books = new List<Book>();
+            List<Author> authors= new List<Author>();
+
 
             context.Database.EnsureCreated();
            
@@ -35,7 +37,7 @@ namespace BooksApi
                     ShortDescription= "Unlocking Android= A Developer's Guide provides concise, hands-on instruction for the Android operating system and development tools. This book teaches important architectural concepts in a straightforward writing style and builds on this with practical and useful examples throughout.",
                     LongDescription= "Android is an open source mobile phone platform based on the Linux operating system and developed by the Open Handset Alliance, a consortium of over 30 hardware, software and telecom companies that focus on open standards for mobile devices. Led by search giant, Google, Android is designed to deliver a better and more open and cost effective mobile experience.    Unlocking Android= A Developer's Guide provides concise, hands-on instruction for the Android operating system and development tools. This book teaches important architectural concepts in a straightforward writing style and builds on this with practical and useful examples throughout. Based on his mobile development experience and his deep knowledge of the arcane Android technical documentation, the author conveys the know-how you need to develop practical applications that build upon or replace any of Androids features, however small.    Unlocking Android= A Developer's Guide prepares the reader to embrace the platform in easy-to-understand language and builds on this foundation with re-usable Java code examples. It is ideal for corporate and hobbyists alike who have an interest, or a mandate, to deliver software functionality for cell phones.    WHAT'S INSIDE=        * Android's place in the market      * Using the Eclipse environment for Android development      * The Intents - how and why they are used      * Application classes=            o Activity            o Service            o IntentReceiver       * User interface design      * Using the ContentProvider to manage data      * Persisting data with the SQLite database      * Networking examples      * Telephony applications      * Notification methods      * OpenGL, animation & multimedia      * Sample Applications  ",
                     Status= "PUBLISH",
-                    //Authors =  "W. Frank Ableson, Charlie Collins, Robi Sen" ,
+                    //Authors =  "W. Frank Ableson, Charlie Collins, Robi Sen",
                     Categories = "Open Source, Mobile",
                     });
 
@@ -89,7 +91,7 @@ namespace BooksApi
                     ThumbnailURL = "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed2.jpg",
                     LongDescription = "Using Flex, you can create high-quality, effective, and interactive Rich Internet Applications (RIAs) quickly and easily. Flex removes the complexity barrier from RIA development by offering sophisticated tools and a straightforward programming language so you can focus on what you want to do instead of how to do it. And the new features added in Flex 4 give you an even wider range of options!    Flex 4 in Action is an easy-to-follow, hands-on Flex tutorial that goes beyond feature coverage and helps you put Flex to work in real day-to-day tasks. You'll quickly master the Flex API and learn to apply the techniques that make your Flex applications stand out from the crowd.    The expert //Authors of Flex 4 in Action have one goal-to help you get down to business with Flex. Fast. Flex 4 in Action filters out the noise and dives into the core topics you need every day. Using numerous easy-to-understand examples, Flex 4 in Action gives you a strong foundation that you can build on as the complexity of your projects increases.    Interesting themes, styles, and skins  It's in there.  Working with databases  You got it.  Interactive forms and validation  You bet.  Charting techniques to help you visualize data  Bam!  And you'll get full coverage of these great Flex 4 upgrades=  Next generation Spark components-New buttons, form inputs, navigation controls and other visual components replace the Flex 3 \"Halo\" versions. Spark components are easier to customize, which makes skinning and theme design much faster  A new \"network monitor\" allows you to see the data communications between a Flex application and a backend server, which helps when trying to debug applications that are communicating to another system/service  Numerous productivity boosting features that speed up the process of creating applications  A faster compiler to take your human-written source code and convert it into a machine-readable format  Built-in support for unit testing allows you to improve the quality of your software, and reduce the time spent in testing",
                     Status = "PUBLISH",
-                    //Authors= "Tariq Ahmed", "Dan Orlando", "John C. Bland II", "Joel Hooks",
+                    //Authors= "Tariq Ahmed", "Dan Orlando", "Joel Hooks",
                     Categories = "Internet"
                 });
 
@@ -264,7 +266,7 @@ namespace BooksApi
                     PublishedDate = "1998-06-01",
                     LongDescription = "Distributed Application Development with PowerBuilder 6.0 is a vital source for the PowerBuilder programmer; it provides the sort of detailed coverage of Distributed PowerBuilder that you can find nowwhere else.    The book opens with a discussion of distributed computing in general, as well as its design principles and technologies. Then Distributed PowerBuilder is examined in detail. By building a simple application step by step, the author discusses all of the concepts and components needed for building a PowerBuilder application and shows how to make the application available over a network.    Finally, the author explores how PowerBuilder can be used in distributed solutions both with and without using DPB.    Distributed Application Development with PowerBuilder 6.0 is for any PowerBuilder developer looking for information on distributed computing options with the PowerBuilder environment. IS managers, system architects, and developers using many different technologies can learn how PowerBuilder can be used as all or part of the solution for building distributed applications.    The main topic of this book is Distributed PowerBuilder (DPB). It covers the basics of building a DPB application and walks through each new feature with examples including the Shared object, DataWindow synchronization, Server Push and Web.PB. It also explains distributed computing technologies and design principles so that your application can be built to handle the stresses of a distributed environment.  ",
                     Status = "PUBLISH",
-                    //Authors= "Michael J. Barlotta",
+                    //Authors= "Michael Barlotta",
                     Categories = "PowerBuilder"
                 });
                 books.Add(new Book()
@@ -642,7 +644,7 @@ namespace BooksApi
                     ShortDescription = "Mobile Agents is the first book to give the reader the ability to create and use powerful mobile agents on the Internet.",
                     LongDescription = "Mobile Agents is the first book to give the reader the ability to create and use powerful mobile agents on the Internet. The book presents the reality of today's agent technologies and the future that this technology promises. It teaches how to create and deploy the major mobile agent systems (Telescript, Agent Tcl, Ara, Aglets Workbench) and how to solve a variety of problems on the Internet. Each of the chapters was written in collaboration with the original developers of the agent systems.",
                     Status = "PUBLISH",
-                    //Authors= "William R. Cockayne and Michael Zyda", "editors",
+                    //Authors= "William R. Cockayne",
                     Categories = "Internet"
                 });
 
@@ -735,7 +737,7 @@ namespace BooksApi
                     ThumbnailURL = "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/crane3.jpg",
                     LongDescription = "Common Ajax tasks should be easy, and with Prototype and Scriptaculous they are. Prototype and Scriptaculous are libraries of reusable JavaScript code that simplify Ajax development. Prototype provides helpful methods and objects that extend JavaScript in a safe, consistent way. Its clever Ajax request model simplifies cross-browser development. Scriptaculous, which is based on Prototype, offers handy pre-fabricated widgets for rich UI development.    Prototype and Scriptaculous in Action is a comprehensive, practical guide that walks you feature-by-feature through the two libraries. First, you   ll use Scriptaculous to make easy but powerful UI improvements. Then you   ll dig into Prototype   s elegant and sparse syntax. See how a few characters of Prototype code can save a dozen lines of JavaScript. By applying these techniques, you can concentrate on the function and flow of your application instead of the coding details. This book is written for web developers with a working knowledge of JavaScript.",
                     Status = "PUBLISH",
-                    //Authors= "Dave Crane", "Bear Bibeault with Tom Locke",
+                    //Authors= "Dave Crane",
                     Categories = "Web Development"
                 });
                 books.Add(new Book()
@@ -1215,26 +1217,810 @@ namespace BooksApi
 
 
 
-                ////Authors
+                //Authors
 
 
-                var author1 = new Author()
+                authors.Add(new Author()
                 {
-                    Name = "Test",
-                    FirstName = "lala",
-                    Birth = "01-01-2000",
-                };
+                    Name = "Cogoluegnes",
+                    FirstName = "Arnaud",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Templier",
+                    FirstName = "Thierry",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Piper",
+                    FirstName = "Andy",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                  
+                    Name = "Harms",
+                    FirstName = "Daryl",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "McDonald",
+                    FirstName = "Kenneth",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Hanson",
+                    FirstName = "Robert",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Tacy",
+                    FirstName = "Adam",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                   
+                    Name = "Hall",
+                    FirstName = "Richard S.",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Pauls",
+                    FirstName = "Karl",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "McCulloch",
+                    FirstName = "Stuart",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Savage",
+                    FirstName = "David",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Gutz",
+                    FirstName = "Steven",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                { 
+                    Name = "Smith",
+                    FirstName = "Glen",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Ledbrook",
+                    FirstName = "Peter",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Grimes",
+                    FirstName = "Fergal",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                { 
+                    Name = "Grayson",
+                    FirstName = "John E.",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Goyal",
+                    FirstName = "Vikram",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Drye",
+                    FirstName = "Stephen C.",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Wake",
+                    FirstName = "William C.",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Donley",
+                    FirstName = "Clayton",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {   
+                    Name = "Dossot",
+                    FirstName = "David",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "D'Emic",
+                    FirstName = "John",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Dirksen",
+                    FirstName = "Jos",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Johnson",
+                    FirstName = "Dave",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {             
+                    Name = "Deshmukh",
+                    FirstName = "Hanumant",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Malavia",
+                    FirstName = "Jignesh",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Scarpino",
+                    FirstName = "Matthew",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Rimple",
+                    FirstName = "Ken",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Penchikala",
+                    FirstName = "Srini",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Dennis",
+                    FirstName = "Alan",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {         
+                    Name = "DeLia",
+                    FirstName = "Tony",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Landres",
+                    FirstName = "Galina",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Rivera",
+                    FirstName = "Isidor",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Sankaran",
+                    FirstName = "Prakash",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Davis",
+                    FirstName = "Jeff",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {  
+                    Name = "Brown",
+                    FirstName = "Donald",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Davis",
+                    FirstName = "Chad Michael",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Stanlick",
+                    FirstName = "Scott",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Allen",
+                    FirstName = "Dan",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {  
+                    Name = "Dashorst",
+                    FirstName = "Martijn",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Hillenius",
+                    FirstName = "Eelco",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {   
+                    Name = "Crane",
+                    FirstName = "Dave",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Richardson",
+                    FirstName = "Crave",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Cross",
+                    FirstName = "David",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Crowther",
+                    FirstName = "Rob",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {   
+ 
+         
+ 
+                    Name = "Cockayne",
+                    FirstName = "William R.",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Colledge",
+                    FirstName = "Ron",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Collins",
+                    FirstName = "Charlie",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Galpin",
+                    FirstName = "Michael D.",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Kaeppler",
+                    FirstName = "Mathias",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Conway",
+                    FirstName = "Damian",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Cooper",
+                    FirstName = "Robert",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Collins",
+                    FirstName = "Charles",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Pascarello",
+                    FirstName = "Eric",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "James",
+                    FirstName = "Darren",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Sonneveld",
+                    FirstName = "Jord",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Bibeault",
+                    FirstName = "Bear",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Goddard",
+                    FirstName = "Ted",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Gray",
+                    FirstName = "Chris",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Ram",
+                    FirstName = "Venkataraman",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Walker",
+                    FirstName = "Joe",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {    
+                    Name = "Bochicchio",
+                    FirstName = "Daniele",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Mostarda",
+                    FirstName = "Stefano",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "De Sanctis",
+                    FirstName = "Marco",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Briggs",
+                    FirstName = "Anthony",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Brooks",
+                    FirstName = "Richard",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Brown",
+                    FirstName = "C. Wayne",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "J. Shepherd",
+                    FirstName = "Barry",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {  
+                    Name = "Burnett",
+                    FirstName = "Margaret M.",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Goldberg",
+                    FirstName = "Adele",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Lewis",
+                    FirstName = "Ted G.",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Cahill",
+                    FirstName = "Bear P.",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Allen",
+                    FirstName = "Christopher",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Appelcline",
+                    FirstName = "Shannon",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Campbell",
+                    FirstName = "Chad A.",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Stockton",
+                    FirstName = "John",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Ceder",
+                    FirstName = "Naomi R.",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Cervenka",
+                    FirstName = "Tom",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Chapman",
+                    FirstName = "Robert",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {   
+                    Name = "Barrilleaux",
+                    FirstName = "Jon",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Bauer",
+                    FirstName = "Christian",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "King",
+                    FirstName = "Gavin",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Bayern",
+                    FirstName = "Shawn",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {    
+                    Name = "Begin",
+                    FirstName = "Clinton",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Goodin",
+                    FirstName = "Brandon",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Meadors",
+                    FirstName = "Larry",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Douglas W.",
+                    FirstName = "Bennett",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Bernard",
+                    FirstName = "Emmanuel",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Griffin",
+                    FirstName = "John",
+                    Birth = ""
+
+                });  authors.Add(new Author()
+                {
+                    Name = "Katz",
+                    FirstName = "Yehuda",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Birman",
+                    FirstName = "Kenneth P.",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Black",
+                    FirstName = "David A.",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Boag",
+                    FirstName = "Paul A.",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {               
+                    Name = "Ableson",
+                    FirstName = "W. Frank",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Sen",
+                    FirstName = "Robi",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Adzic",
+                    FirstName = "Gojko",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Abid",
+                    FirstName = "Faisal",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Ahmed",
+                    FirstName = "Tariq",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Hirschi",
+                    FirstName = "Jon",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Orlando",
+                    FirstName = "Dan",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Hooks",
+                    FirstName = "Joel",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Ferrin",
+                    FirstName = "Danno",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Alag",
+                    FirstName = "Satnam",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Allen",
+                    FirstName = "Rob",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Lo",
+                    FirstName = "Nick",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Brown",
+                    FirstName = "Steven",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {  
+                    Name = "Allmon",
+                    FirstName = "Bernerd",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Anderson",
+                    FirstName = "Jeremy",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Almiray",
+                    FirstName ="Andres",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Shingler",
+                    FirstName = "James",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "de Castro Alves",
+                    FirstName = "Alexandre",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {   
+                    Name = "Armstrong",
+                    FirstName = "Peter",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Asher",
+                    FirstName = "Levi",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Crumlish",
+                    FirstName = "Christian",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Azher",
+                    FirstName = "Jamil",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Baley",
+                    FirstName = "Kyle",
+                    Birth = ""
+
+                }); authors.Add(new Author()
+                {
+                    Name = "Belcham",
+                    FirstName = "Donald",
+                    Birth = ""
+                }); authors.Add(new Author()
+                {
+                    Name = "Banker",
+                    FirstName = "Kyle",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Barlotta",
+                    FirstName = "Michael",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                    Name = "Weiss",
+                    FirstName = "Jason R.",
+                    Birth = ""
+
+                });
 
 
 
 
-                author1.Books = new List<Book>();
-                author1.Books.Add(books[0]);
-                author1.Books.Add(books[1]);
+                //author1.Books = new List<Book>();
+                //author1.Books.Add(books[0]);
+                //author1.Books.Add(books[1]);
+                //context.Authors.Add(author1);
 
-                context.Authors.Add(author1);
 
-      
+                foreach (var item in authors)
+                {
+                    context.Authors.Add(item);
+                }
+
 
 
                 foreach (var item in books)

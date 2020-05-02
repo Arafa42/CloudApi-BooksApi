@@ -20,15 +20,13 @@ namespace BooksApi
         public string ISBN { get; set; } 
 
         [Required]
-        [Range(1,99999)]
+        [Range(0,99999)]
         public string Pages { get; set; }
         
-       
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
+         
         [Required]
         [StringLength(999)]
         public string Categories { get; set; }
-
 
         [StringLength(500)]
      

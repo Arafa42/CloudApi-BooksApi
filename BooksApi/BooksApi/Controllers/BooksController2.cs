@@ -56,7 +56,19 @@ namespace BooksApi.Controllers
                         else if(dir == "desc") 
                         { query = query.OrderByDescending(d => d.ISBN);}
                         break;
-
+                    case "category":
+                        if (dir == "asc")
+                        { query = query.OrderBy(d => d.Categories); }
+                        else if (dir == "desc")
+                        { query = query.OrderByDescending(d => d.Categories); }
+                        break;
+                    case "page":
+                        if (dir == "asc")
+                        { query = query.OrderBy(d => d.Pages); }
+                        else if (dir == "desc")
+                        { query = query.OrderByDescending(d => d.Pages); }
+                        break;
+                       
                 }              
             
             }
@@ -109,23 +121,23 @@ namespace BooksApi.Controllers
 
 
 
-        [Route("{id}/authors")]
-        [HttpGet]
+        //[Route("{id}/authors")]
+        //[HttpGet]
 
-        public IActionResult GetAuthors(int id)
-        {
+        //public IActionResult GetAuthors(int id)
+        //{
 
-            var book = context.Books
-                .Include(d => d.Authors)
-                .SingleOrDefault(d => d.Id == id);
+        //    var book = context.Books
+        //        .Include(d => d.Authors)
+        //        .SingleOrDefault(d => d.Id == id);
 
 
-            if (book == null)
-            {
-                return NotFound();
-            }
-            return Ok(book.Authors);
-        }
+        //    if (book == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Ok(book.Authors);
+        //}
 
 
 

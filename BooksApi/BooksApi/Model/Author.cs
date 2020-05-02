@@ -13,7 +13,7 @@ namespace BooksApi.Model
         public string FirstName { get; set; }
         public string Birth { get; set; }
 
-        
+      
         public ICollection<Book> Books { get; set; }
 
     }

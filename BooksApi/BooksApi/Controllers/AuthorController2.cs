@@ -61,23 +61,23 @@ namespace BooksApi.Controllers
             }
 
 
-        [Route("{id}/books")]
-        [HttpGet]
+        //[Route("{id}/books")]
+        //[HttpGet]
 
-        public IActionResult GetBooks(int id)
-        {
+        //public IActionResult GetBooks(int id)
+        //{
 
-            var author = context.Authors
-                .Include(d => d.Books)
-                .SingleOrDefault(d => d.Id == id);
+        //    var author = context.Authors
+        //        .Include(d => d.Books)
+        //        .SingleOrDefault(d => d.Id == id);
 
 
-            if (author == null)
-            {
-                return NotFound();
-            }
-            return Ok(author.Books);
-        }
+        //    if (author == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Ok(author.Books);
+        //}
 
 
         [Route("{id}")]
