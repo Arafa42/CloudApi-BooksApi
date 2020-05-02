@@ -17,6 +17,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { BoekenService } from './boeken.service';
 import {TableModule} from 'primeng/table';
 import {DataViewModule} from 'primeng/dataview';
+import { ExternApiDetailsComponent } from './extern-api-details/extern-api-details.component';
 
 
 
@@ -26,7 +27,8 @@ import {DataViewModule} from 'primeng/dataview';
     HomeComponent,
     LibraryComponent,
     ExternApiComponent,
-    RestApiManagerComponent
+    RestApiManagerComponent,
+    ExternApiDetailsComponent
   
   ],
   imports: [
@@ -43,11 +45,12 @@ import {DataViewModule} from 'primeng/dataview';
     PanelModule,
     AccordionModule,
     RouterModule.forRoot([
-
+ 
      {path: "home", component:HomeComponent},
      {path: "library", component:LibraryComponent},
      {path: "externapi", component:ExternApiComponent},
      {path: "restapimanager", component:RestApiManagerComponent},
+     {path: "extern-api-details/:product", component:ExternApiDetailsComponent},
      {path: "", redirectTo: "home", pathMatch:"full"}
 
     ])

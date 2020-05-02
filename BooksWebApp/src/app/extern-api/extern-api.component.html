@@ -1,1 +1,47 @@
-<p>extern-api works!</p>
+<div class="container-fluid mt-4">
+    <div class="container">
+      <div class="row justify-content-start align-items-start mb-5">
+        <div class="col-lg-12">
+          <!-- <form [formGroup]="addForm"> formControlName="keyword"  required-->
+          <input
+            class="form-control"
+            [formControl]="queryField"
+            type="search"
+            id="keyword"
+            placeholder="search for books..."
+            typeahead-wait-ms="delay"
+            autocomplete="off"
+          />
+          <!-- </form> -->
+        </div>
+        <div *ngIf="items" class="col-12 mt-5">
+          <div class="row justify-content-around">
+            <div
+              *ngFor="let product of items"
+              class="col-lg-3 col-md-6 col-sm-12 book-display"
+            >
+              <div class="image">
+                <img
+                  *ngIf="product.volumeInfo.imageLinks"
+                  src="{{ product.volumeInfo.imageLinks.thumbnail }}"
+                  alt=""
+                />
+              </div>
+              <div *ngFor="let aut of product.volumeInfo.authors">
+                <span> Authors: {{ aut }}</span>
+              </div>
+              <div class="details">
+                <span>Title: {{ product.volumeInfo.title }}</span> <br />
+                <br />
+                <a [routerLink]="['/extern-api-details', combineSlug(product.id)]">Details</a>
+                <a (click)="goToLink(product.volumeInfo.previewLink)">preview</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  

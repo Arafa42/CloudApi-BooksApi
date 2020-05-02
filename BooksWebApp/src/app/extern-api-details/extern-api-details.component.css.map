@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "extern-api-details.component.scss"
+    ],
+    "names": [],
+    "file": "extern-api-details.component.css"
+}

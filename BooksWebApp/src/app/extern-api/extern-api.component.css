@@ -1,0 +1,20 @@
+
+  h1 {
+    margin: 0;
+    color: rgb(251, 251, 251);
+    text-align: center;
+  }
+  .container .row {
+    min-height: 100vh;
+  }
+  .book-display {
+    font-size: 20px;
+    min-height: 50vh;
+    border: 1px solid rgb(15, 15, 15);
+    margin-right: 5px;
+    margin-top: 20px;
+    padding: 10px;
+    box-shadow: 0 6px 6px #e6e6e6;
+
+  }
+  
