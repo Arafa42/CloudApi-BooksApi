@@ -30,7 +30,7 @@ namespace BooksApi
 
         [StringLength(500)]
     
-        public Author Authors { get; set; }
+        //public Author Authors { get; set; }
         public string PublishedDate { get; set; }
         public string ThumbnailURL { get; set; }
         public string ShortDescription { get; set; }

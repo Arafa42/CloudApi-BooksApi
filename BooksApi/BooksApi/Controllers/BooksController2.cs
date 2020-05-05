@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Net.Mime;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
+using BooksApi.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 namespace BooksApi.Controllers
@@ -108,7 +110,7 @@ namespace BooksApi.Controllers
         {
 
             var book = context.Books
-                .Include(d => d.Authors)
+                //.Include(d => d.Authors)
                 .SingleOrDefault(d => d.Id == id);
 
 
@@ -119,6 +121,28 @@ namespace BooksApi.Controllers
             return Ok(book);
         }
 
+
+
+
+        [Route("{id}/authors")]
+        [HttpGet]
+
+        public IActionResult MultipleAuthors(int id)
+        {
+            var booksWithAuthors = context.Books.Include(c => c.MultipleAuthors).ThenInclude(row => row.Author).First(c => c.Id == id);
+            var multipleAuthors = booksWithAuthors.MultipleAuthors.Select(row => row.Author);
+
+          
+            
+
+            if (multipleAuthors == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(multipleAuthors);
+
+        }
 
 
         //[Route("{id}/authors")]

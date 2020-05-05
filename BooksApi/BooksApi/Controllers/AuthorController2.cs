@@ -23,14 +23,78 @@ namespace BooksApi.Controllers
                 this.context = context;
             }
 
-            [HttpGet]
-            public List<Author> GetAllAuthors()
-            {
+        //    [HttpGet]
+        //    public List<Author> GetAllAuthors()
+        //    {
 
-                return context.Authors.ToList();
+        //        return context.Authors.ToList();
+        //    }
+
+
+
+
+
+        [HttpGet]
+
+        public List<Author> GetAllAuthors(string name, string firstname,int? page, string sort, int length = 10, string dir = "asc")
+        {
+
+
+            IQueryable<Author> query = context.Authors;
+
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                query = query.Where(d => d.Name == name);
+            }
+            if (!string.IsNullOrWhiteSpace(firstname))
+            {
+                query = query.Where(d => d.FirstName == firstname);
             }
 
-            [HttpPost]
+            if (!string.IsNullOrWhiteSpace(sort))
+            {
+
+                switch (sort)
+                {
+                    case "firstname":
+                        if (dir == "asc")
+                        { query = query.OrderBy(d => d.FirstName); }
+                        else if (dir == "desc")
+                        { query = query.OrderByDescending(d => d.FirstName); }
+                        break;
+                    case "name":
+                        if (dir == "asc")
+                        { query = query.OrderBy(d => d.Name); }
+                        else if (dir == "desc")
+                        { query = query.OrderByDescending(d => d.Name); }
+                        break;
+   
+                }
+
+            }
+
+
+            if (page.HasValue)
+            {
+                query = query.Skip(page.Value * length);
+            }
+            query = query.Take(length);
+
+
+            return query.ToList();
+        }
+
+
+
+
+
+
+
+
+
+
+
+        [HttpPost]
             public IActionResult CreateAuthor([FromBody] Author newAuthor)
             {
                 context.Authors.Add(newAuthor);
@@ -43,6 +107,12 @@ namespace BooksApi.Controllers
 
 
 
+
+
+
+
+
+
             [Route("{id}")]
             [HttpGet]
 
@@ -50,7 +120,7 @@ namespace BooksApi.Controllers
             {
 
                 var author = context.Authors
-                    .Include(d => d.Books)
+                    //.Include(d => d.Books)
                     .SingleOrDefault(d => d.Id == id);
 
 

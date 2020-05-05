@@ -14,7 +14,7 @@ namespace BooksApi.Model
         public string Birth { get; set; }
 
       
-        public ICollection<Book> Books { get; set; }
+        //public ICollection<Book> Books { get; set; }
 
         [JsonIgnore]
         public ICollection<BooksAuthor> MultipleBooks { get; set; }

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -29,6 +30,7 @@ namespace BooksApi
 
                 books.Add(new Book()
                 {
+                    //0
                     Title = "Unlocking Android",
                     ISBN = "1933988673",
                     Pages = "416",
@@ -43,6 +45,7 @@ namespace BooksApi
 
                 books.Add(new Book()
                 {
+                    //1
                     Title = "Android in Action, Second Edition",
                     ISBN = "1935182722",
                     Pages = "592",
@@ -57,6 +60,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //2
                     Title = "Specification by Example",
                     ISBN = "1617290084",
                     Pages = "0",
@@ -70,6 +74,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //3
                     Title = "Flex 3 in Action",
                     ISBN = "1933988746",
                     Pages = "576",
@@ -84,6 +89,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //4
                     Title = "Flex 4 in Action",
                     ISBN = "1935182420",
                     Pages = "600",
@@ -98,6 +104,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //5
                     Title = "Collective Intelligence in Action",
                     ISBN = "1933988312",
                     Pages = "425",
@@ -112,6 +119,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //6
                     Title = "Zend Framework in Action",
                     ISBN = "1933988320",
                     Pages = "432",
@@ -127,6 +135,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //7
                     Title = "Flex on Java",
                     ISBN = "1933988797",
                     Pages = "265",
@@ -142,6 +151,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //8
                     Title = "Griffon in Action",
                     ISBN = "1935182234",
                     Pages = "375",
@@ -157,6 +167,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //9
                     Title = "OSGi in Depth",
                     ISBN = "193518217X",
                     Pages = "325",
@@ -172,6 +183,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //10
                     Title = "Flexible Rails",
                     ISBN = "1933988509",
                     Pages = "592",
@@ -187,6 +199,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //11
                     Title = "Hello! Flex 4",
                     ISBN = "1933988762",
                     Pages = "258",
@@ -202,6 +215,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //12
                     Title = "Coffeehouse",
                     ISBN = "1884777384",
                     Pages = "316",
@@ -217,6 +231,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //13
                     Title = "Team Foundation Server 2008 in Action",
                     ISBN = "1933988592",
                     Pages = "344",
@@ -231,6 +246,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //14
                     Title = "Brownfield Application Development in .NET",
                     ISBN = "1933988711",
                     Pages = "550",
@@ -246,6 +262,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //15
                     Title = "MongoDB in Action",
                     ISBN = "1935182870",
                     Pages = "0",
@@ -260,6 +277,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //16
                     Title = "Distributed Application Development with PowerBuilder 6.0",
                     ISBN = "1884777686",
                     Pages = "504",
@@ -272,6 +290,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //17
                     Title = "Jaguar Development with PowerBuilder 7",
                     ISBN = "1884777864",
                     Pages = "550",
@@ -286,6 +305,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //18
                     Title = "Taming Jaguar",
                     ISBN = "1884777686",
                     Pages = "362",
@@ -293,12 +313,13 @@ namespace BooksApi
                     ThumbnailURL = "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/barlotta3.jpg",
                     LongDescription = "Taming Jaguar is part of the PowerBuilder Developer's series, which includes Distributed Application Development with PowerBuilder 6 and Jaguar Development with PowerBuilder 7.    An application server is the heart of your enterprise computing architecture, centralizing your web content, business logic, and access to your data and legacy applications. Sybase's application server, Jaguar CTS, delivers performance, scalability, and flexibility running CORBA , COM, Java/EJB, C++, and PowerBuilder components.    If you are looking to adopt Jaguar in your enterprise, look no further. Taming Jaguar shows you how to solve the real-world problems of installing, trouble-shooting, designing, developing, and maintaining a Jaguar application. Topical chapters are organized in a Q & A format making it easy for you to quickly find the solution to your problem. They also provide foundational and background information as well as detailed technical how-tos.    Although designed so you can find your problems easily, this book is meant to be read cover-to-cover with each chapter discussing its topic exhaustively.    What's inside=    J2EE development  Java Servlets  Jaguar administration & code balancing  EJBs  Web development with PowerDynamo  Advanced component design ",
                     Status = "PUBLISH",
-                    //Authors= "Michael J. Barlotta", "Jason R. Weiss",
+                    //Authors= "Michael Barlotta", "Jason R. Weiss",
                     Categories = "PowerBuilder"
                 });
                 books.Add(new Book()
 
                 {
+                    //19
                     Title = "3D User Interfaces with Java 3D",
                     ISBN = "1884777902",
                     Pages = "520",
@@ -312,6 +333,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //20
                     Title = "Hibernate in Action",
                     ISBN = "193239415X",
                     Pages = "400",
@@ -325,6 +347,7 @@ namespace BooksApi
                 });
                 books.Add(new Book()
                 {
+                    //21
                     Title = "Hibernate in Action (Chinese Edition)",
                     Pages = "400",
                     PublishedDate = "1999-06-01",
@@ -337,6 +360,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //22
                     Title = "Java Persistence with Hibernate",
                     ISBN = "1932394885",
                     Pages = "880",
@@ -351,6 +375,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //23
                     Title = "JSTL in Action",
                     ISBN = "1930110529",
                     Pages = "480",
@@ -364,6 +389,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //24
                     Title = "iBATIS in Action",
                     ISBN = "1932394826",
                     Pages = "384",
@@ -378,6 +404,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //25
                     Title = "Designing Hard Software",
                     ISBN = "133046192",
                     Pages = "350",
@@ -391,6 +418,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //26
                     Title = "Hibernate Search in Action",
                     ISBN = "1933988649",
                     Pages = "488",
@@ -405,6 +433,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //27
                     Title = "jQuery in Action",
                     ISBN = "1933988355",
                     Pages = "376",
@@ -419,6 +448,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //28
                     Title = "jQuery in Action, Second Edition",
                     ISBN = "1935182323",
                     Pages = "488",
@@ -433,6 +463,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //29
                     Title = "Building Secure and Reliable Network Applications",
                     ISBN = "1884777295",
                     Pages = "591",
@@ -447,6 +478,7 @@ namespace BooksApi
 
                 books.Add(new Book()
                 {
+                    //30
                     Title = "Ruby for Rails",
                     ISBN = "1932394699",
                     Pages = "532",
@@ -461,6 +493,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //31
                     Title = "The Well-Grounded Rubyist",
                     ISBN = "1933988657",
                     Pages = "520",
@@ -475,6 +508,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //32
                     Title = "Website Owner's Manual",
                     ISBN = "1933988452",
                     Pages = "296",
@@ -489,6 +523,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //33
                     Title = "ASP.NET 4.0 in Practice",
                     ISBN = "1935182463",
                     Pages = "504",
@@ -503,6 +538,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //34
                     Title = "Hello! Python",
                     ISBN = "1935182080",
                     Pages = "350",
@@ -517,6 +553,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //35
                     Title = "PFC Programmer's Reference Manual",
                     ISBN = "1884777554",
                     Pages = "368",
@@ -530,6 +567,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //36
                     Title = "Graphics File Formats",
                     ISBN = "133034054",
                     Pages = "484",
@@ -543,6 +581,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //37
                     Title = "Visual Object Oriented Programming",
                     ISBN = "131723979",
                     Pages = "280",
@@ -556,6 +595,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //38
                     Title = "iOS in Practice",
                     ISBN = "1617291269",
                     Pages = "325",
@@ -568,6 +608,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //39
                     Title = "iPhone in Action",
                     ISBN = "193398886X",
                     Pages = "472",
@@ -582,6 +623,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //40
                     Title = "Silverlight 2 in Action",
                     ISBN = "1933988428",
                     Pages = "400",
@@ -596,6 +638,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //41
                     Title = "The Quick Python Book, Second Edition",
                     ISBN = "193518220X",
                     Pages = "360",
@@ -610,6 +653,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //42
                     Title = "Internet and Intranet Applications with PowerBuilder 6",
                     ISBN = "1884777600",
                     Pages = "390",
@@ -623,6 +667,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //43
                     Title = "Practical Methods for Your Year 2000 Problem",
                     ISBN = "188477752X",
                     Pages = "236",
@@ -636,6 +681,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //44
                     Title = "Mobile Agents",
                     ISBN = "1884777368",
                     Pages = "320",
@@ -651,6 +697,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //45
                     Title = "SQL Server 2008 Administration in Action",
                     ISBN = "193398872X",
                     Pages = "468",
@@ -664,6 +711,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //46
                     Title = "Android in Practice",
                     ISBN = "1935182927",
                     Pages = "500",
@@ -678,6 +726,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //47
                     Title = "Object Oriented Perl",
                     ISBN = "1884777791",
                     Pages = "512",
@@ -691,6 +740,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //48
                     Title = "GWT in Practice",
                     ISBN = "1933988290",
                     Pages = "376",
@@ -704,6 +754,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //49
                     Title = "Ajax in Action",
                     ISBN = "1932394613",
                     Pages = "680",
@@ -717,6 +768,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //50
                     Title = "Ajax in Practice",
                     ISBN = "1932394990",
                     Pages = "536",
@@ -730,6 +782,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //51
                     Title = "Prototype and Scriptaculous in Action",
                     ISBN = "1933988037",
                     Pages = "544",
@@ -743,6 +796,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //52
                     Title = "POJOs in Action",
                     ISBN = "1932394583",
                     Pages = "592",
@@ -757,6 +811,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //53
                     Title = "Data Munging with Perl",
                     ISBN = "1930110006",
                     Pages = "304",
@@ -770,6 +825,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //54
                     Title = "Hello! HTML5 & CSS3",
                     ISBN = "1935182897",
                     Pages = "325",
@@ -784,6 +840,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //55
                     Title = "Seam in Action",
                     ISBN = "1933988401",
                     Pages = "624",
@@ -798,6 +855,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //56
                     Title = "Wicket in Action",
                     ISBN = "1932394982",
                     Pages = "392",
@@ -811,6 +869,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //57
                     Title = "Open Source SOA",
                     ISBN = "1933988541",
                     Pages = "448",
@@ -824,6 +883,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //58
                     Title = "Struts 2 in Action",
                     ISBN = "193398807X",
                     Pages = "432",
@@ -837,6 +897,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //59
                     Title = "Essential Guide to Peoplesoft Development and Customization",
                     ISBN = "1884777929",
                     Pages = "1101",
@@ -850,6 +911,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //60
                     Title = ".NET Multithreading",
                     ISBN = "1930110545",
                     Pages = "360",
@@ -863,6 +925,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //61
                     Title = "SCWCD Exam Study Kit Second Edition",
                     ISBN = "1932394389",
                     Pages = "560",
@@ -876,6 +939,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //62
                     Title = "Spring Roo in Action",
                     ISBN = "193518296X",
                     Pages = "500",
@@ -888,6 +952,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //63
                     Title = "SOA Governance in Action",
                     ISBN = "1617290270",
                     Pages = "0",
@@ -900,6 +965,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //64
                     Title = "RSS and Atom in Action",
                     ISBN = "1932394494",
                     Pages = "400",
@@ -913,6 +979,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //65
                     Title = "LDAP Programming, Management and Integration",
                     ISBN = "1930110405",
                     Pages = "352",
@@ -926,6 +993,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //66
                     Title = "Mule in Action",
                     ISBN = "1933988967",
                     Pages = "432",
@@ -937,9 +1005,8 @@ namespace BooksApi
                     Categories = "Java, Software Engineering"
                 });
                 books.Add(new Book()
-
-
                 {
+                    //67
                     Title = "Java Foundation Classes",
                     ISBN = "1884777678",
                     Pages = "1088",
@@ -952,8 +1019,8 @@ namespace BooksApi
                 });
 
                 books.Add(new Book()
-
                 {
+                    //68
                     Title = "Managing Components with Modeler",
                     ISBN = "1932394524k-e",
                     Pages = "0",
@@ -966,6 +1033,7 @@ namespace BooksApi
 
                 books.Add(new Book()
                 {
+                    //69
                     Title = "Command-line Processing with CLI",
                     ISBN = "1932394524l-e",
                     Pages = "0",
@@ -979,6 +1047,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //70
                     Title = "Understanding and Using Chain",
                     ISBN = "1932394524m-e",
                     Pages = "0",
@@ -992,6 +1061,7 @@ namespace BooksApi
                 books.Add(new Book()
 
                 {
+                    //71
                     Title = "Working with the Logging and Discovery Components",
                     ISBN = "1932394524n-e",
                     Pages = "0",
@@ -1003,9 +1073,8 @@ namespace BooksApi
                 });
 
                 books.Add(new Book()
-
-
                 {
+                    //72
                     Title = "Uploading files with FileUpload",
                     ISBN = "1932394524b-e",
                     Pages = "0",
@@ -1016,8 +1085,8 @@ namespace BooksApi
                     Categories = "Java"
                 });
                 books.Add(new Book()
-
                 {
+                    //73
                     Title = "Handling Protocols with the Net Component",
                     ISBN = "1932394524c-e",
                     Pages = "0",
@@ -1028,8 +1097,8 @@ namespace BooksApi
                     Categories = "Java"
                 });
                 books.Add(new Book()
-
                 {
+                    //74
                     Title = "XML Parsing with Digester",
                     ISBN = "1932394524d-e",
                     Pages = "0",
@@ -1040,8 +1109,8 @@ namespace BooksApi
                     Categories = "Java"
                 });
                 books.Add(new Book()
-
                 {
+                    //75
                     Title = "JXPath and Betwixt= Working with XML",
                     ISBN = "1932394524e-e",
                     Pages = "0",
@@ -1052,8 +1121,8 @@ namespace BooksApi
                     Categories = "Java"
                 });
                 books.Add(new Book()
-
                 {
+                    //76
                     Title = "Validating Data with Validator",
                     ISBN = "1932394524f-e",
                     Pages = "0",
@@ -1064,8 +1133,8 @@ namespace BooksApi
                     Categories = "Java"
                 });
                 books.Add(new Book()
-
                 {
+                    //77
                     Title = "Enhancing Java Core Libraries with Collections",
                     ISBN = "1932394524g-e",
                     Pages = "0",
@@ -1076,8 +1145,8 @@ namespace BooksApi
                     Categories = "Java"
                 });
                 books.Add(new Book()
-
                 {
+                    //78
                     Title = "Enhancing Java Core Libraries with BeanUtils and Lang",
                     ISBN = "1932394524h-e",
                     Pages = "0",
@@ -1089,8 +1158,8 @@ namespace BooksApi
                 });
 
                 books.Add(new Book()
-
                 {
+                    //79
                     Title = "Pool and DBCP= Creating and Using Object Pools",
                     ISBN = "1932394524i-e",
                     Pages = "0",
@@ -1102,8 +1171,8 @@ namespace BooksApi
                 });
 
                 books.Add(new Book()
-
                 {
+                    //80
                     Title = "Python and Tkinter Programming",
                     ISBN = "1884777813",
                     Pages = "688",
@@ -1115,8 +1184,8 @@ namespace BooksApi
                     Categories = "Python"
                 });
                 books.Add(new Book()
-
                 {
+                    //81
                     Title = "Microsoft.NET for Programmers",
                     ISBN = "1930110197",
                     Pages = "386",
@@ -1128,8 +1197,8 @@ namespace BooksApi
                     Categories = "Microsoft .NET"
                 });
                 books.Add(new Book()
-
                 {
+                    //82
                     Title = "Grails in Action",
                     ISBN = "1933988932",
                     Pages = "520",
@@ -1142,8 +1211,8 @@ namespace BooksApi
                     Categories = "Java"
                 });
                 books.Add(new Book()
-
                 {
+                    //83
                     Title = "Up to Speed with Swing, Second Edition",
                     ISBN = "1884777759",
                     Pages = "560",
@@ -1156,8 +1225,8 @@ namespace BooksApi
                     Categories = "Java"
                 });
                 books.Add(new Book()
-
                 {
+                    //84
                     Title = "OSGi in Action",
                     ISBN = "1933988916",
                     Pages = "576",
@@ -1170,8 +1239,8 @@ namespace BooksApi
                     Categories = "Internet"
                 });
                 books.Add(new Book()
-
                 {
+                    //85
                     Title = "GWT in Action",
                     ISBN = "1933988231",
                     Pages = "632",
@@ -1183,8 +1252,8 @@ namespace BooksApi
                     Categories = "Internet, Java"
                 });
                 books.Add(new Book()
-
                 {
+                    //86
                     Title = "The Quick Python Book",
                     ISBN = "1884777740",
                     Pages = "444",
@@ -1196,8 +1265,8 @@ namespace BooksApi
                     Categories = "Python"
                 });
                 books.Add(new Book()
-
                 {
+                    //87
                     Title = "Spring Dynamic Modules in Action",
                     ISBN = "1935182307",
                     Pages = "450",
@@ -1222,6 +1291,7 @@ namespace BooksApi
 
                 authors.Add(new Author()
                 {
+                    //0
                     Name = "Cogoluegnes",
                     FirstName = "Arnaud",
                     Birth = ""
@@ -1229,6 +1299,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //1
                     Name = "Templier",
                     FirstName = "Thierry",
                     Birth = ""
@@ -1236,6 +1307,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //2
                     Name = "Piper",
                     FirstName = "Andy",
                     Birth = ""
@@ -1243,7 +1315,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
-
+                    //3
                     Name = "Harms",
                     FirstName = "Daryl",
                     Birth = ""
@@ -1251,6 +1323,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //4
                     Name = "McDonald",
                     FirstName = "Kenneth",
                     Birth = ""
@@ -1258,6 +1331,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //5
                     Name = "Hanson",
                     FirstName = "Robert",
                     Birth = ""
@@ -1265,6 +1339,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //6
                     Name = "Tacy",
                     FirstName = "Adam",
                     Birth = ""
@@ -1272,7 +1347,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
-
+                    //7
                     Name = "Hall",
                     FirstName = "Richard S.",
                     Birth = ""
@@ -1280,6 +1355,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //8
                     Name = "Pauls",
                     FirstName = "Karl",
                     Birth = ""
@@ -1287,6 +1363,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //9
                     Name = "McCulloch",
                     FirstName = "Stuart",
                     Birth = ""
@@ -1294,6 +1371,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //10
                     Name = "Savage",
                     FirstName = "David",
                     Birth = ""
@@ -1301,6 +1379,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //11
                     Name = "Gutz",
                     FirstName = "Steven",
                     Birth = ""
@@ -1308,6 +1387,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //12
                     Name = "Smith",
                     FirstName = "Glen",
                     Birth = ""
@@ -1315,6 +1395,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //13
                     Name = "Ledbrook",
                     FirstName = "Peter",
                     Birth = ""
@@ -1322,6 +1403,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //14
                     Name = "Grimes",
                     FirstName = "Fergal",
                     Birth = ""
@@ -1329,6 +1411,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //15
                     Name = "Grayson",
                     FirstName = "John E.",
                     Birth = ""
@@ -1336,13 +1419,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
-                    Name = "Goyal",
-                    FirstName = "Vikram",
-                    Birth = ""
-
-                });
-                authors.Add(new Author()
-                {
+                    //16
                     Name = "Drye",
                     FirstName = "Stephen C.",
                     Birth = ""
@@ -1350,6 +1427,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //17
                     Name = "Wake",
                     FirstName = "William C.",
                     Birth = ""
@@ -1357,6 +1435,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //18
                     Name = "Donley",
                     FirstName = "Clayton",
                     Birth = ""
@@ -1364,6 +1443,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //19
                     Name = "Dossot",
                     FirstName = "David",
                     Birth = ""
@@ -1371,6 +1451,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //20
                     Name = "D'Emic",
                     FirstName = "John",
                     Birth = ""
@@ -1378,6 +1459,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //21
                     Name = "Dirksen",
                     FirstName = "Jos",
                     Birth = ""
@@ -1385,6 +1467,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //22
                     Name = "Johnson",
                     FirstName = "Dave",
                     Birth = ""
@@ -1392,6 +1475,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //23
                     Name = "Deshmukh",
                     FirstName = "Hanumant",
                     Birth = ""
@@ -1399,6 +1483,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //24
                     Name = "Malavia",
                     FirstName = "Jignesh",
                     Birth = ""
@@ -1406,6 +1491,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //25
                     Name = "Scarpino",
                     FirstName = "Matthew",
                     Birth = ""
@@ -1413,6 +1499,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //26
                     Name = "Rimple",
                     FirstName = "Ken",
                     Birth = ""
@@ -1420,6 +1507,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //27
                     Name = "Penchikala",
                     FirstName = "Srini",
                     Birth = ""
@@ -1427,6 +1515,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //28
                     Name = "Dennis",
                     FirstName = "Alan",
                     Birth = ""
@@ -1434,6 +1523,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //29
                     Name = "DeLia",
                     FirstName = "Tony",
                     Birth = ""
@@ -1441,6 +1531,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //30
                     Name = "Landres",
                     FirstName = "Galina",
                     Birth = ""
@@ -1448,6 +1539,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //31
                     Name = "Rivera",
                     FirstName = "Isidor",
                     Birth = ""
@@ -1455,6 +1547,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //32
                     Name = "Sankaran",
                     FirstName = "Prakash",
                     Birth = ""
@@ -1462,6 +1555,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //33
                     Name = "Davis",
                     FirstName = "Jeff",
                     Birth = ""
@@ -1469,6 +1563,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //34
                     Name = "Brown",
                     FirstName = "Donald",
                     Birth = ""
@@ -1476,6 +1571,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //35
                     Name = "Davis",
                     FirstName = "Chad Michael",
                     Birth = ""
@@ -1483,6 +1579,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //36
                     Name = "Stanlick",
                     FirstName = "Scott",
                     Birth = ""
@@ -1490,6 +1587,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //37
                     Name = "Allen",
                     FirstName = "Dan",
                     Birth = ""
@@ -1497,6 +1595,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //38
                     Name = "Dashorst",
                     FirstName = "Martijn",
                     Birth = ""
@@ -1504,6 +1603,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //39
                     Name = "Hillenius",
                     FirstName = "Eelco",
                     Birth = ""
@@ -1511,6 +1611,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //40
                     Name = "Crane",
                     FirstName = "Dave",
                     Birth = ""
@@ -1518,6 +1619,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //41
                     Name = "Richardson",
                     FirstName = "Crave",
                     Birth = ""
@@ -1525,6 +1627,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //42
                     Name = "Cross",
                     FirstName = "David",
                     Birth = ""
@@ -1532,6 +1635,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //43
                     Name = "Crowther",
                     FirstName = "Rob",
                     Birth = ""
@@ -1539,9 +1643,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
-
-
-
+                    //44
                     Name = "Cockayne",
                     FirstName = "William R.",
                     Birth = ""
@@ -1549,198 +1651,231 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //45
                     Name = "Colledge",
                     FirstName = "Ron",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //46
                     Name = "Collins",
                     FirstName = "Charlie",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //47
                     Name = "Galpin",
                     FirstName = "Michael D.",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //48
                     Name = "Kaeppler",
                     FirstName = "Mathias",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //49
                     Name = "Conway",
                     FirstName = "Damian",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //50
                     Name = "Cooper",
                     FirstName = "Robert",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //51
                     Name = "Collins",
                     FirstName = "Charles",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //52
                     Name = "Pascarello",
                     FirstName = "Eric",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //53
                     Name = "James",
                     FirstName = "Darren",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //54
                     Name = "Sonneveld",
                     FirstName = "Jord",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //55
                     Name = "Bibeault",
                     FirstName = "Bear",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //56
                     Name = "Goddard",
                     FirstName = "Ted",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //57
                     Name = "Gray",
                     FirstName = "Chris",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //58
                     Name = "Ram",
                     FirstName = "Venkataraman",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //59
                     Name = "Walker",
                     FirstName = "Joe",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //60
                     Name = "Bochicchio",
                     FirstName = "Daniele",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //61
                     Name = "Mostarda",
                     FirstName = "Stefano",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //62
                     Name = "De Sanctis",
                     FirstName = "Marco",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //63
                     Name = "Briggs",
                     FirstName = "Anthony",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //64
                     Name = "Brooks",
                     FirstName = "Richard",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //65
                     Name = "Brown",
                     FirstName = "C. Wayne",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //66
                     Name = "J. Shepherd",
                     FirstName = "Barry",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //67
                     Name = "Burnett",
                     FirstName = "Margaret M.",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //68
                     Name = "Goldberg",
                     FirstName = "Adele",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //69
                     Name = "Lewis",
                     FirstName = "Ted G.",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //70
                     Name = "Cahill",
                     FirstName = "Bear P.",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //71
                     Name = "Allen",
                     FirstName = "Christopher",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //72
                     Name = "Appelcline",
                     FirstName = "Shannon",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //73
                     Name = "Campbell",
                     FirstName = "Chad A.",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //74
                     Name = "Stockton",
                     FirstName = "John",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //75
                     Name = "Ceder",
                     FirstName = "Naomi R.",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //76
                     Name = "Cervenka",
                     FirstName = "Tom",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //77
                     Name = "Chapman",
                     FirstName = "Robert",
                     Birth = ""
@@ -1748,114 +1883,133 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //78
                     Name = "Barrilleaux",
                     FirstName = "Jon",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //79
                     Name = "Bauer",
                     FirstName = "Christian",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //80
                     Name = "King",
                     FirstName = "Gavin",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //81
                     Name = "Bayern",
                     FirstName = "Shawn",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //82
                     Name = "Begin",
                     FirstName = "Clinton",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //83
                     Name = "Goodin",
                     FirstName = "Brandon",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //84
                     Name = "Meadors",
                     FirstName = "Larry",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //85
                     Name = "Douglas W.",
                     FirstName = "Bennett",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //86
                     Name = "Bernard",
                     FirstName = "Emmanuel",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //87
                     Name = "Griffin",
                     FirstName = "John",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //88
                     Name = "Katz",
                     FirstName = "Yehuda",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //89
                     Name = "Birman",
                     FirstName = "Kenneth P.",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //90
                     Name = "Black",
                     FirstName = "David A.",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //91
                     Name = "Boag",
                     FirstName = "Paul A.",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //92
                     Name = "Ableson",
                     FirstName = "W. Frank",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //93
                     Name = "Sen",
                     FirstName = "Robi",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //94
                     Name = "Adzic",
                     FirstName = "Gojko",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //95
                     Name = "Abid",
                     FirstName = "Faisal",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //96
                     Name = "Ahmed",
                     FirstName = "Tariq",
                     Birth = ""
@@ -1863,6 +2017,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //97
                     Name = "Hirschi",
                     FirstName = "Jon",
                     Birth = ""
@@ -1870,6 +2025,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //98
                     Name = "Orlando",
                     FirstName = "Dan",
                     Birth = ""
@@ -1877,6 +2033,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //99
                     Name = "Hooks",
                     FirstName = "Joel",
                     Birth = ""
@@ -1884,6 +2041,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //100
                     Name = "Ferrin",
                     FirstName = "Danno",
                     Birth = ""
@@ -1891,6 +2049,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //101
                     Name = "Alag",
                     FirstName = "Satnam",
                     Birth = ""
@@ -1898,6 +2057,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //102
                     Name = "Allen",
                     FirstName = "Rob",
                     Birth = ""
@@ -1905,6 +2065,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //103
                     Name = "Lo",
                     FirstName = "Nick",
                     Birth = ""
@@ -1912,6 +2073,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //104
                     Name = "Brown",
                     FirstName = "Steven",
                     Birth = ""
@@ -1919,6 +2081,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //105
                     Name = "Allmon",
                     FirstName = "Bernerd",
                     Birth = ""
@@ -1926,6 +2089,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //106
                     Name = "Anderson",
                     FirstName = "Jeremy",
                     Birth = ""
@@ -1933,6 +2097,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //107
                     Name = "Almiray",
                     FirstName = "Andres",
                     Birth = ""
@@ -1940,53 +2105,62 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //108
                     Name = "Shingler",
                     FirstName = "James",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //109
                     Name = "de Castro Alves",
                     FirstName = "Alexandre",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //110
                     Name = "Armstrong",
                     FirstName = "Peter",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //111
                     Name = "Asher",
                     FirstName = "Levi",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //112
                     Name = "Crumlish",
                     FirstName = "Christian",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //113
                     Name = "Azher",
                     FirstName = "Jamil",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //114
                     Name = "Baley",
                     FirstName = "Kyle",
                     Birth = ""
 
                 }); authors.Add(new Author()
                 {
+                    //115
                     Name = "Belcham",
                     FirstName = "Donald",
                     Birth = ""
                 }); authors.Add(new Author()
                 {
+                    //116
                     Name = "Banker",
                     FirstName = "Kyle",
                     Birth = ""
@@ -1994,6 +2168,7 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //117
                     Name = "Barlotta",
                     FirstName = "Michael",
                     Birth = ""
@@ -2001,32 +2176,515 @@ namespace BooksApi
                 });
                 authors.Add(new Author()
                 {
+                    //118
                     Name = "Weiss",
                     FirstName = "Jason R.",
+                    Birth = ""
+
+                });
+                authors.Add(new Author()
+                {
+                   //119
+                    Name = "Goyal",
+                    FirstName = "Vikram",
                     Birth = ""
 
                 });
 
 
 
+                //BOEK1
+                var relatie1 = new BooksAuthor() { Book = books[0], Author = authors[92] };
+                var relatie2 = new BooksAuthor() { Book = books[0], Author = authors[93] };
+                var relatie3 = new BooksAuthor() { Book = books[0], Author = authors[46] };
+                //BOEK2
+                var relatie4 = new BooksAuthor() { Book = books[1], Author = authors[92] };
+                var relatie5 = new BooksAuthor() { Book = books[1], Author = authors[93] };
+                //BOEK3
+                var relatie6 = new BooksAuthor() { Book = books[2], Author = authors[94] };
+                //BOEK4
+                var relatie7 = new BooksAuthor() { Book = books[3], Author = authors[95] };
+                var relatie8 = new BooksAuthor() { Book = books[3], Author = authors[96] };
+                var relatie9 = new BooksAuthor() { Book = books[3], Author = authors[97] };
+                //BOEK5
+                var relatie10 = new BooksAuthor() { Book = books[4], Author = authors[96] };
+                var relatie11 = new BooksAuthor() { Book = books[4], Author = authors[98] };
+                var relatie12 = new BooksAuthor() { Book = books[4], Author = authors[99] };
+                //BOEK6
+                var relatie13 = new BooksAuthor() { Book = books[5], Author = authors[101] };
+                //BOEK7
+                var relatie14 = new BooksAuthor() { Book = books[6], Author = authors[102] };
+                var relatie15 = new BooksAuthor() { Book = books[6], Author = authors[103] };
+                var relatie16 = new BooksAuthor() { Book = books[6], Author = authors[104] };
+                //BOEK8
+                var relatie17 = new BooksAuthor() { Book = books[7], Author = authors[105] };
+                var relatie18 = new BooksAuthor() { Book = books[7], Author = authors[106] };
+                //BOEK9
+                var relatie19 = new BooksAuthor() { Book = books[8], Author = authors[100] };
+                var relatie20 = new BooksAuthor() { Book = books[8], Author = authors[107] };
+                var relatie21 = new BooksAuthor() { Book = books[8], Author = authors[108] };
+                //BOEK10
+                var relatie22 = new BooksAuthor() { Book = books[9], Author = authors[109] };
+                //BOEK11
+                var relatie23 = new BooksAuthor() { Book = books[10], Author = authors[110] };
+                //BOEK12
+                var relatie24 = new BooksAuthor() { Book = books[11], Author = authors[110] };
+                //BOEK13
+                var relatie25 = new BooksAuthor() { Book = books[12], Author = authors[111] };
+                var relatie26 = new BooksAuthor() { Book = books[12], Author = authors[112] };
+                //BOEK14
+                var relatie27 = new BooksAuthor() { Book = books[13], Author = authors[113] };
+                //BOEK15
+                var relatie28 = new BooksAuthor() { Book = books[14], Author = authors[114] };
+                var relatie29 = new BooksAuthor() { Book = books[14], Author = authors[115] };
+                //BOEK16
+                var relatie30 = new BooksAuthor() { Book = books[15], Author = authors[116] };
+                //BOEK17
+                var relatie31 = new BooksAuthor() { Book = books[16], Author = authors[117] };
+                //BOEK18
+                var relatie32 = new BooksAuthor() { Book = books[17], Author = authors[117] };
+                //BOEK19
+                var relatie33 = new BooksAuthor() { Book = books[18], Author = authors[117] };
+                var relatie34 = new BooksAuthor() { Book = books[18], Author = authors[118] };
+                //BOEK20
+                var relatie35 = new BooksAuthor() { Book = books[19], Author = authors[78] };
+                //BOEK21
+                var relatie36 = new BooksAuthor() { Book = books[20], Author = authors[79] };
+                var relatie37 = new BooksAuthor() { Book = books[20], Author = authors[80] };
+                //BOEK22
+                var relatie38 = new BooksAuthor() { Book = books[21], Author = authors[79] };
+                var relatie39 = new BooksAuthor() { Book = books[21], Author = authors[80] };
+                //BOEK23
+                var relatie40 = new BooksAuthor() { Book = books[22], Author = authors[79] };
+                var relatie41 = new BooksAuthor() { Book = books[22], Author = authors[80] };
+                //BOEK24
+                var relatie42 = new BooksAuthor() { Book = books[23], Author = authors[81] };
+                //BOEK25
+                var relatie43 = new BooksAuthor() { Book = books[24], Author = authors[82] };
+                var relatie44 = new BooksAuthor() { Book = books[24], Author = authors[83] };
+                var relatie45 = new BooksAuthor() { Book = books[24], Author = authors[84] };
+                //BOEK26
+                var relatie46 = new BooksAuthor() { Book = books[25], Author = authors[85] };
+                //BOEK27
+                var relatie47 = new BooksAuthor() { Book = books[26], Author = authors[86] };
+                var relatie48 = new BooksAuthor() { Book = books[26], Author = authors[87] };
+                //BOEK28
+                var relatie49 = new BooksAuthor() { Book = books[27], Author = authors[55] };
+                var relatie50 = new BooksAuthor() { Book = books[27], Author = authors[88] };
+                //BOEK29 
+                var relatie51 = new BooksAuthor() { Book = books[28], Author = authors[55] };
+                var relatie52 = new BooksAuthor() { Book = books[29], Author = authors[88] };
+                //BOEK30 
+                var relatie53 = new BooksAuthor() { Book = books[29], Author = authors[89] };
+                //BOEK31
+                var relatie54 = new BooksAuthor() { Book = books[30], Author = authors[90] };
+                //BOEK32
+                var relatie55 = new BooksAuthor() { Book = books[31], Author = authors[90] };
+                //BOEK33
+                var relatie56 = new BooksAuthor() { Book = books[32], Author = authors[91] };
+                //BOEK34
+                var relatie57 = new BooksAuthor() { Book = books[33], Author = authors[60] };
+                var relatie58 = new BooksAuthor() { Book = books[33], Author = authors[61] };
+                var relatie59 = new BooksAuthor() { Book = books[33], Author = authors[62] };
+                //BOEK35
+                var relatie60 = new BooksAuthor() { Book = books[34], Author = authors[63] };
+                //BOEK36
+                var relatie61 = new BooksAuthor() { Book = books[35], Author = authors[64] };
+                //BOEK37
+                var relatie62 = new BooksAuthor() { Book = books[36], Author = authors[65] };
+                var relatie63 = new BooksAuthor() { Book = books[36], Author = authors[66] };
+                //BOEK38
+                var relatie64 = new BooksAuthor() { Book = books[37], Author = authors[67] };
+                var relatie65 = new BooksAuthor() { Book = books[37], Author = authors[68] };
+                var relatie66 = new BooksAuthor() { Book = books[37], Author = authors[69] };
+                //BOEK39
+                var relatie67 = new BooksAuthor() { Book = books[38], Author = authors[70] };
+                //BOEK40
+                var relatie68 = new BooksAuthor() { Book = books[39], Author = authors[71] };
+                var relatie69 = new BooksAuthor() { Book = books[39], Author = authors[72] };
+                //BOEK41
+                var relatie70 = new BooksAuthor() { Book = books[40], Author = authors[73] };
+                var relatie71 = new BooksAuthor() { Book = books[40], Author = authors[74] };
+                //BOEK42
+                var relatie72 = new BooksAuthor() { Book = books[41], Author = authors[75] };
+                //BOEK43
+                var relatie73 = new BooksAuthor() { Book = books[42], Author = authors[76] };
+                //BOEK44
+                var relatie74 = new BooksAuthor() { Book = books[43], Author = authors[77] };
+                //BOEK45
+                var relatie75 = new BooksAuthor() { Book = books[44], Author = authors[44] };
+                //BOEK46
+                var relatie76 = new BooksAuthor() { Book = books[45], Author = authors[45] };
+                //BOEK47
+                var relatie77 = new BooksAuthor() { Book = books[46], Author = authors[46] };
+                var relatie78 = new BooksAuthor() { Book = books[46], Author = authors[47] };
+                var relatie79 = new BooksAuthor() { Book = books[46], Author = authors[48] };
+                //BOEK48
+                var relatie80 = new BooksAuthor() { Book = books[47], Author = authors[49] };
+                //BOEK49
+                var relatie81 = new BooksAuthor() { Book = books[48], Author = authors[50] };
+                var relatie82 = new BooksAuthor() { Book = books[48], Author = authors[51] };
+                //BOEK50
+                var relatie83 = new BooksAuthor() { Book = books[49], Author = authors[40] };
+                var relatie84 = new BooksAuthor() { Book = books[49], Author = authors[52] };
+                var relatie85 = new BooksAuthor() { Book = books[49], Author = authors[53] };
+                //BOEK51
+                var relatie86 = new BooksAuthor() { Book = books[50], Author = authors[40] };
+                var relatie87 = new BooksAuthor() { Book = books[50], Author = authors[54] };
+                var relatie88 = new BooksAuthor() { Book = books[50], Author = authors[55] };
+                var relatie89 = new BooksAuthor() { Book = books[50], Author = authors[56] };
+                var relatie90 = new BooksAuthor() { Book = books[50], Author = authors[57] };
+                var relatie91 = new BooksAuthor() { Book = books[50], Author = authors[58] };
+                var relatie92 = new BooksAuthor() { Book = books[50], Author = authors[59] };
+                //BOEK52
+                var relatie93 = new BooksAuthor() { Book = books[51], Author = authors[40] };
+                //BOEK53
+                var relatie94 = new BooksAuthor() { Book = books[52], Author = authors[41] };
+                //BOEK54
+                var relatie95 = new BooksAuthor() { Book = books[53], Author = authors[42] };
+                //BOEK55
+                var relatie96 = new BooksAuthor() { Book = books[54], Author = authors[43] };
+                //BOEK56
+                var relatie97 = new BooksAuthor() { Book = books[55], Author = authors[37] };
+                //BOEK57
+                var relatie98 = new BooksAuthor() { Book = books[56], Author = authors[38] };
+                var relatie99 = new BooksAuthor() { Book = books[56], Author = authors[39] };
+                //BOEK58
+                var relatie100 = new BooksAuthor() { Book = books[57], Author = authors[33] };
+                //BOEK59
+                var relatie101 = new BooksAuthor() { Book = books[58], Author = authors[34] };
+                var relatie102 = new BooksAuthor() { Book = books[58], Author = authors[35] };
+                var relatie103 = new BooksAuthor() { Book = books[58], Author = authors[36] };
+                //BOEK60
+                var relatie104 = new BooksAuthor() { Book = books[59], Author = authors[29] };
+                var relatie105 = new BooksAuthor() { Book = books[59], Author = authors[30] };
+                var relatie106 = new BooksAuthor() { Book = books[59], Author = authors[31] };
+                var relatie107 = new BooksAuthor() { Book = books[59], Author = authors[32] };
+                //BOEK61
+                var relatie108 = new BooksAuthor() { Book = books[60], Author = authors[28] };
+                //BOEK62
+                var relatie109 = new BooksAuthor() { Book = books[61], Author = authors[23] };
+                var relatie110 = new BooksAuthor() { Book = books[61], Author = authors[24] };
+                var relatie111 = new BooksAuthor() { Book = books[61], Author = authors[25] };
+                //BOEK63
+                var relatie112 = new BooksAuthor() { Book = books[62], Author = authors[26] };
+                var relatie113 = new BooksAuthor() { Book = books[62], Author = authors[27] };
+                //BOEK64
+                var relatie114 = new BooksAuthor() { Book = books[63], Author = authors[21] };
+                //BOEK65
+                var relatie115 = new BooksAuthor() { Book = books[64], Author = authors[22] };
+                //BOEK66
+                var relatie116 = new BooksAuthor() { Book = books[65], Author = authors[18] };
+                //BOEK67
+                var relatie117 = new BooksAuthor() { Book = books[66], Author = authors[19] };
+                var relatie118 = new BooksAuthor() { Book = books[66], Author = authors[20] };
+                //BOEK68
+                var relatie119 = new BooksAuthor() { Book = books[67], Author = authors[16] };
+                var relatie120 = new BooksAuthor() { Book = books[67], Author = authors[17] };
+                //BOEK69
+                var relatie121 = new BooksAuthor() { Book = books[68], Author = authors[119] };
+                //BOEK70
+                var relatie122 = new BooksAuthor() { Book = books[69], Author = authors[119] };
+                //BOEK71
+                var relatie123 = new BooksAuthor() { Book = books[70], Author = authors[119] };
+                //BOEK72
+                var relatie124 = new BooksAuthor() { Book = books[71], Author = authors[119] };
+                //BOEK73
+                var relatie125 = new BooksAuthor() { Book = books[72], Author = authors[119] };
+                //BOEK74
+                var relatie126 = new BooksAuthor() { Book = books[73], Author = authors[119] };
+                //BOEK75
+                var relatie127 = new BooksAuthor() { Book = books[74], Author = authors[119] };
+                //BOEK76
+                var relatie128 = new BooksAuthor() { Book = books[75], Author = authors[119] };
+                //BOEK77
+                var relatie129 = new BooksAuthor() { Book = books[76], Author = authors[119] };
+                //BOEK78
+                var relatie130 = new BooksAuthor() { Book = books[77], Author = authors[119] };
+                //BOEK79
+                var relatie131 = new BooksAuthor() { Book = books[78], Author = authors[119] };
+                //BOEK80
+                var relatie132 = new BooksAuthor() { Book = books[79], Author = authors[119] };
+                //BOEK81
+                var relatie133 = new BooksAuthor() { Book = books[80], Author = authors[15] };
+                //BOEK82
+                var relatie134 = new BooksAuthor() { Book = books[81], Author = authors[14] };
+                //BOEK83
+                var relatie135 = new BooksAuthor() { Book = books[82], Author = authors[12] };
+                var relatie136 = new BooksAuthor() { Book = books[82], Author = authors[13] };
+                //BOEK84
+                var relatie137 = new BooksAuthor() { Book = books[83], Author = authors[11] };
+                //BOEK85
+                var relatie138 = new BooksAuthor() { Book = books[84], Author = authors[7] };
+                var relatie139 = new BooksAuthor() { Book = books[84], Author = authors[8] };
+                var relatie140 = new BooksAuthor() { Book = books[84], Author = authors[9] };
+                var relatie141 = new BooksAuthor() { Book = books[84], Author = authors[10] };
+                //BOEK86
+                var relatie142 = new BooksAuthor() { Book = books[85], Author = authors[5] };
+                var relatie143 = new BooksAuthor() { Book = books[85], Author = authors[6] };
+                //BOEK87
+                var relatie144 = new BooksAuthor() { Book = books[86], Author = authors[3] };
+                var relatie145 = new BooksAuthor() { Book = books[86], Author = authors[4] };
+                //BOEK88
+                var relatie146 = new BooksAuthor() { Book = books[87], Author = authors[0] };
+                var relatie147 = new BooksAuthor() { Book = books[87], Author = authors[1] };
+                var relatie148 = new BooksAuthor() { Book = books[87], Author = authors[2] };
 
-                //author1.Books = new List<Book>();
-                //author1.Books.Add(books[0]);
-                //author1.Books.Add(books[1]);
-                //context.Authors.Add(author1);
+
+
+
+                books[0].MultipleAuthors = new List<BooksAuthor>() {relatie1,relatie2,relatie3};
+                books[1].MultipleAuthors = new List<BooksAuthor>() {relatie4, relatie5};
+                books[2].MultipleAuthors = new List<BooksAuthor>() {relatie6};
+                books[3].MultipleAuthors = new List<BooksAuthor>() {relatie7,relatie8,relatie9};
+                books[4].MultipleAuthors = new List<BooksAuthor>() {relatie10, relatie11, relatie12};
+                books[5].MultipleAuthors = new List<BooksAuthor>() {relatie13};
+                books[6].MultipleAuthors = new List<BooksAuthor>() {relatie14,relatie15,relatie16};
+                books[7].MultipleAuthors = new List<BooksAuthor>() {relatie17, relatie18};
+                books[8].MultipleAuthors = new List<BooksAuthor>() {relatie19, relatie20, relatie21};
+                books[9].MultipleAuthors = new List<BooksAuthor>() {relatie22};
+                books[10].MultipleAuthors = new List<BooksAuthor>() {relatie23};
+                books[11].MultipleAuthors = new List<BooksAuthor>() {relatie24};
+                books[12].MultipleAuthors = new List<BooksAuthor>() {relatie25,relatie26};
+                books[13].MultipleAuthors = new List<BooksAuthor>() {relatie27};
+                books[14].MultipleAuthors = new List<BooksAuthor>() {relatie28,relatie29};
+                books[15].MultipleAuthors = new List<BooksAuthor>() {relatie30};
+                books[16].MultipleAuthors = new List<BooksAuthor>() {relatie31};
+                books[17].MultipleAuthors = new List<BooksAuthor>() {relatie32};
+                books[18].MultipleAuthors = new List<BooksAuthor>() {relatie33,relatie34};
+                books[19].MultipleAuthors = new List<BooksAuthor>() {relatie35};
+                books[20].MultipleAuthors = new List<BooksAuthor>() {relatie36,relatie37};
+                books[21].MultipleAuthors = new List<BooksAuthor>() {relatie38,relatie39};
+                books[22].MultipleAuthors = new List<BooksAuthor>() {relatie40,relatie41};
+                books[23].MultipleAuthors = new List<BooksAuthor>() {relatie42};
+                books[24].MultipleAuthors = new List<BooksAuthor>() {relatie43,relatie44,relatie45};
+                books[25].MultipleAuthors = new List<BooksAuthor>() {relatie46};
+                books[26].MultipleAuthors = new List<BooksAuthor>() {relatie47,relatie48};
+                books[27].MultipleAuthors = new List<BooksAuthor>() {relatie49,relatie50};
+                books[28].MultipleAuthors = new List<BooksAuthor>() {relatie51,relatie52};
+                books[29].MultipleAuthors = new List<BooksAuthor>() {relatie53};
+                books[30].MultipleAuthors = new List<BooksAuthor>() {relatie54};
+                books[31].MultipleAuthors = new List<BooksAuthor>() {relatie55};
+                books[32].MultipleAuthors = new List<BooksAuthor>() {relatie56};
+                books[33].MultipleAuthors = new List<BooksAuthor>() {relatie57,relatie58,relatie59};
+                books[34].MultipleAuthors = new List<BooksAuthor>() {relatie60};
+                books[35].MultipleAuthors = new List<BooksAuthor>() {relatie61};
+                books[36].MultipleAuthors = new List<BooksAuthor>() {relatie62,relatie63};
+                books[37].MultipleAuthors = new List<BooksAuthor>() {relatie64,relatie65,relatie66};
+                books[38].MultipleAuthors = new List<BooksAuthor>() {relatie67};
+                books[39].MultipleAuthors = new List<BooksAuthor>() {relatie68,relatie69};
+                books[40].MultipleAuthors = new List<BooksAuthor>() {relatie70,relatie71};
+                books[41].MultipleAuthors = new List<BooksAuthor>() {relatie72};
+                books[42].MultipleAuthors = new List<BooksAuthor>() {relatie73};
+                books[43].MultipleAuthors = new List<BooksAuthor>() {relatie74};
+                books[44].MultipleAuthors = new List<BooksAuthor>() {relatie75};
+                books[45].MultipleAuthors = new List<BooksAuthor>() {relatie76};
+                books[46].MultipleAuthors = new List<BooksAuthor>() {relatie77,relatie78,relatie79};
+                books[47].MultipleAuthors = new List<BooksAuthor>() {relatie80};
+                books[48].MultipleAuthors = new List<BooksAuthor>() {relatie81,relatie82};
+                books[49].MultipleAuthors = new List<BooksAuthor>() {relatie83,relatie84,relatie85};
+                books[50].MultipleAuthors = new List<BooksAuthor>() {relatie86,relatie87,relatie88,relatie89,relatie90,relatie91,relatie92};
+                books[51].MultipleAuthors = new List<BooksAuthor>() {relatie93};
+                books[52].MultipleAuthors = new List<BooksAuthor>() {relatie94};
+                books[53].MultipleAuthors = new List<BooksAuthor>() {relatie95};
+                books[54].MultipleAuthors = new List<BooksAuthor>() {relatie96};
+                books[55].MultipleAuthors = new List<BooksAuthor>() {relatie97};
+                books[56].MultipleAuthors = new List<BooksAuthor>() {relatie98,relatie99};
+                books[57].MultipleAuthors = new List<BooksAuthor>() {relatie100};
+                books[58].MultipleAuthors = new List<BooksAuthor>() {relatie101,relatie102,relatie103};
+                books[59].MultipleAuthors = new List<BooksAuthor>() {relatie104,relatie105,relatie106,relatie107};
+                books[60].MultipleAuthors = new List<BooksAuthor>() {relatie108};
+                books[61].MultipleAuthors = new List<BooksAuthor>() {relatie109,relatie110,relatie111};
+                books[62].MultipleAuthors = new List<BooksAuthor>() {relatie112,relatie113};
+                books[63].MultipleAuthors = new List<BooksAuthor>() {relatie114};
+                books[64].MultipleAuthors = new List<BooksAuthor>() {relatie115};
+                books[65].MultipleAuthors = new List<BooksAuthor>() {relatie116};
+                books[66].MultipleAuthors = new List<BooksAuthor>() {relatie117,relatie118};
+                books[67].MultipleAuthors = new List<BooksAuthor>() {relatie119,relatie120};
+                books[68].MultipleAuthors = new List<BooksAuthor>() {relatie121};
+                books[69].MultipleAuthors = new List<BooksAuthor>() {relatie122};
+                books[70].MultipleAuthors = new List<BooksAuthor>() {relatie123};
+                books[71].MultipleAuthors = new List<BooksAuthor>() {relatie124};
+                books[72].MultipleAuthors = new List<BooksAuthor>() {relatie125};
+                books[73].MultipleAuthors = new List<BooksAuthor>() {relatie126};
+                books[74].MultipleAuthors = new List<BooksAuthor>() {relatie127};
+                books[75].MultipleAuthors = new List<BooksAuthor>() {relatie128};
+                books[76].MultipleAuthors = new List<BooksAuthor>() {relatie129};
+                books[77].MultipleAuthors = new List<BooksAuthor>() {relatie130};
+                books[78].MultipleAuthors = new List<BooksAuthor>() {relatie131};
+                books[79].MultipleAuthors = new List<BooksAuthor>() {relatie132};
+                books[80].MultipleAuthors = new List<BooksAuthor>() {relatie133};
+                books[81].MultipleAuthors = new List<BooksAuthor>() {relatie134};
+                books[82].MultipleAuthors = new List<BooksAuthor>() {relatie135,relatie136};
+                books[83].MultipleAuthors = new List<BooksAuthor>() {relatie137};
+                books[84].MultipleAuthors = new List<BooksAuthor>() {relatie138,relatie139,relatie140,relatie141};
+                books[85].MultipleAuthors = new List<BooksAuthor>() {relatie142,relatie143};
+                books[86].MultipleAuthors = new List<BooksAuthor>() {relatie144,relatie145};
+                books[87].MultipleAuthors = new List<BooksAuthor>() {relatie146,relatie147,relatie148};
 
 
 
 
-                var relatie1 = new BooksAuthor() { Book = books[0], Author = authors[0] };
-                var relatie2 = new BooksAuthor() { Book = books[1], Author = authors[0] };
 
 
-                authors[0].MultipleBooks = new List<BooksAuthor>() { relatie1, relatie2 };
+
+
 
 
                 context.BooksAuthor.Add(relatie1);
                 context.BooksAuthor.Add(relatie2);
+                context.BooksAuthor.Add(relatie3);
+                context.BooksAuthor.Add(relatie4);
+                context.BooksAuthor.Add(relatie5);
+                context.BooksAuthor.Add(relatie6);
+                context.BooksAuthor.Add(relatie7);
+                context.BooksAuthor.Add(relatie8);
+                context.BooksAuthor.Add(relatie9);
+                context.BooksAuthor.Add(relatie10);
+                context.BooksAuthor.Add(relatie11);
+                context.BooksAuthor.Add(relatie12);
+                context.BooksAuthor.Add(relatie13);
+                context.BooksAuthor.Add(relatie14);
+                context.BooksAuthor.Add(relatie15);
+                context.BooksAuthor.Add(relatie16);
+                context.BooksAuthor.Add(relatie17);
+                context.BooksAuthor.Add(relatie18);
+                context.BooksAuthor.Add(relatie19);
+                context.BooksAuthor.Add(relatie20);
+                context.BooksAuthor.Add(relatie21);
+                context.BooksAuthor.Add(relatie22);
+                context.BooksAuthor.Add(relatie23);
+                context.BooksAuthor.Add(relatie24);
+                context.BooksAuthor.Add(relatie25);
+                context.BooksAuthor.Add(relatie26);
+                context.BooksAuthor.Add(relatie27);
+                context.BooksAuthor.Add(relatie28);
+                context.BooksAuthor.Add(relatie29);
+                context.BooksAuthor.Add(relatie30);
+                context.BooksAuthor.Add(relatie31);
+                context.BooksAuthor.Add(relatie32);
+                context.BooksAuthor.Add(relatie33);
+                context.BooksAuthor.Add(relatie34);
+                context.BooksAuthor.Add(relatie35);
+                context.BooksAuthor.Add(relatie36);
+                context.BooksAuthor.Add(relatie37);
+                context.BooksAuthor.Add(relatie38);
+                context.BooksAuthor.Add(relatie39);
+                context.BooksAuthor.Add(relatie40);
+                context.BooksAuthor.Add(relatie41);
+                context.BooksAuthor.Add(relatie42);
+                context.BooksAuthor.Add(relatie43);
+                context.BooksAuthor.Add(relatie44);
+                context.BooksAuthor.Add(relatie45);
+                context.BooksAuthor.Add(relatie46);
+                context.BooksAuthor.Add(relatie47);
+                context.BooksAuthor.Add(relatie48);               
+                context.BooksAuthor.Add(relatie49);
+                context.BooksAuthor.Add(relatie50);
+                context.BooksAuthor.Add(relatie51);
+                context.BooksAuthor.Add(relatie52);
+                context.BooksAuthor.Add(relatie53);
+                context.BooksAuthor.Add(relatie54);
+                context.BooksAuthor.Add(relatie55);
+                context.BooksAuthor.Add(relatie56);
+                context.BooksAuthor.Add(relatie57);
+                context.BooksAuthor.Add(relatie58);
+                context.BooksAuthor.Add(relatie59);
+                context.BooksAuthor.Add(relatie60);
+                context.BooksAuthor.Add(relatie61);
+                context.BooksAuthor.Add(relatie62);
+                context.BooksAuthor.Add(relatie63);
+                context.BooksAuthor.Add(relatie64);
+                context.BooksAuthor.Add(relatie65);
+                context.BooksAuthor.Add(relatie66);
+                context.BooksAuthor.Add(relatie67);
+                context.BooksAuthor.Add(relatie68);
+                context.BooksAuthor.Add(relatie69);
+                context.BooksAuthor.Add(relatie70);
+                context.BooksAuthor.Add(relatie71);
+                context.BooksAuthor.Add(relatie72);
+                context.BooksAuthor.Add(relatie73);
+                context.BooksAuthor.Add(relatie74);
+                context.BooksAuthor.Add(relatie75);
+                context.BooksAuthor.Add(relatie76);
+                context.BooksAuthor.Add(relatie77);
+                context.BooksAuthor.Add(relatie78);
+                context.BooksAuthor.Add(relatie79);
+                context.BooksAuthor.Add(relatie80);
+                context.BooksAuthor.Add(relatie81);
+                context.BooksAuthor.Add(relatie82);
+                context.BooksAuthor.Add(relatie83);
+                context.BooksAuthor.Add(relatie84);
+                context.BooksAuthor.Add(relatie85);
+                context.BooksAuthor.Add(relatie86);
+                context.BooksAuthor.Add(relatie87);
+                context.BooksAuthor.Add(relatie88);
+                context.BooksAuthor.Add(relatie89);
+                context.BooksAuthor.Add(relatie90);
+                context.BooksAuthor.Add(relatie91);
+                context.BooksAuthor.Add(relatie92);
+                context.BooksAuthor.Add(relatie93);
+                context.BooksAuthor.Add(relatie94);
+                context.BooksAuthor.Add(relatie95);
+                context.BooksAuthor.Add(relatie96);
+                context.BooksAuthor.Add(relatie97);
+                context.BooksAuthor.Add(relatie98);
+                context.BooksAuthor.Add(relatie99);
+                context.BooksAuthor.Add(relatie100);
+                context.BooksAuthor.Add(relatie101);
+                context.BooksAuthor.Add(relatie102);
+                context.BooksAuthor.Add(relatie103);
+                context.BooksAuthor.Add(relatie104);
+                context.BooksAuthor.Add(relatie105);
+                context.BooksAuthor.Add(relatie106);
+                context.BooksAuthor.Add(relatie107);
+                context.BooksAuthor.Add(relatie108);
+                context.BooksAuthor.Add(relatie109);
+                context.BooksAuthor.Add(relatie110);
+                context.BooksAuthor.Add(relatie111);
+                context.BooksAuthor.Add(relatie112);
+                context.BooksAuthor.Add(relatie113);
+                context.BooksAuthor.Add(relatie114);
+                context.BooksAuthor.Add(relatie115);
+                context.BooksAuthor.Add(relatie116);
+                context.BooksAuthor.Add(relatie117);
+                context.BooksAuthor.Add(relatie118);
+                context.BooksAuthor.Add(relatie119);
+                context.BooksAuthor.Add(relatie120);
+                context.BooksAuthor.Add(relatie121);
+                context.BooksAuthor.Add(relatie122);
+                context.BooksAuthor.Add(relatie123);
+                context.BooksAuthor.Add(relatie124);
+                context.BooksAuthor.Add(relatie125);
+                context.BooksAuthor.Add(relatie126);
+                context.BooksAuthor.Add(relatie127);
+                context.BooksAuthor.Add(relatie128);
+                context.BooksAuthor.Add(relatie129);
+                context.BooksAuthor.Add(relatie130);
+                context.BooksAuthor.Add(relatie131);
+                context.BooksAuthor.Add(relatie132);
+                context.BooksAuthor.Add(relatie133);
+                context.BooksAuthor.Add(relatie134);
+                context.BooksAuthor.Add(relatie135);
+                context.BooksAuthor.Add(relatie136);
+                context.BooksAuthor.Add(relatie137);
+                context.BooksAuthor.Add(relatie138);
+                context.BooksAuthor.Add(relatie139);
+                context.BooksAuthor.Add(relatie140);
+                context.BooksAuthor.Add(relatie141);
+                context.BooksAuthor.Add(relatie142);
+                context.BooksAuthor.Add(relatie143);
+                context.BooksAuthor.Add(relatie144);
+                context.BooksAuthor.Add(relatie145);
+                context.BooksAuthor.Add(relatie146);
+                context.BooksAuthor.Add(relatie147);
+                context.BooksAuthor.Add(relatie148);
+
+
+
+
+
+
 
 
 
