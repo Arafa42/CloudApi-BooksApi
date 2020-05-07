@@ -14,6 +14,7 @@ boeks2 : IBoek;
 
 boekUrl : string[] = [];
 fetchId : number = 1;
+page: number = 0;
 
 
   constructor(private boekSvc:BoekenService) {     
@@ -22,24 +23,25 @@ fetchId : number = 1;
 
 
 
+  GetBooks(){this.boekSvc.GetBooks(this.page).subscribe(boeken => {
+
+    this.boeks.length = boeken.length;
+    this.boekUrl.length = boeken.length;
+  for (let i = 0; i < boeken.length; i++) {
+   
+    this.boeks[i] = boeken[i];
+    this.boekUrl[i] = boeken[i].thumbnailURL;
+  }
+  
+  });}
 
 
 
   ngOnInit() {
 
-this.boekSvc.GetBooks().subscribe(boeken => {
-
-  this.boeks.length = boeken.length;
-  this.boekUrl.length = boeken.length;
-for (let i = 0; i < boeken.length; i++) {
- 
-  this.boeks[i] = boeken[i];
-  this.boekUrl[i] = boeken[i].thumbnailURL;
-}
-
-});
 
 
+this.GetBooks();
 
 
 

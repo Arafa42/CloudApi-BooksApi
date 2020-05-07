@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap, catchError, map } from 'rxjs/operators';
+import {throwError} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,37 +19,50 @@ export class BoekenService {
     headers: this.headers
   };
 
-GetBooks(){
-return this.http.get<IBoek[]>("https://localhost:44354/api/v1/books?pages=0&length=100")
+
+  private handleError(error: any) {
+    console.error(error);                                       //Created a function to handle and log errors, in case
+    return throwError(error);
+  }
+
+
+GetBooks(page:number=0){
+return this.http.get<IBoek[]>(`https://localhost:44354/api/v1/books?page=${page}&length=10`)
 }
+
 
 GetById (id: number): Observable<IBoek> {
   const url = `${this.apiurl}/${id}`;
-  return this.http.get<IBoek>(url);
+  return this.http.get<IBoek>(url).pipe(
+    catchError(this.handleError)
+    );
   }
 
 
   DeleteBooks(id: number): Observable<IBoek> {
     const url = `${this.apiurl}/${id}`;
-    return this.http.delete<IBoek>(url, this.httpOptions);
+    return this.http.delete<IBoek>(url, this.httpOptions).pipe(
+      catchError(this.handleError));
+ 
   }
 
 
 
 
-  UpdateBooks(user: IBoek): Observable<IBoek>{
-    const url = `${this.apiurl}/${user.id}`;
-    return this.http.put<IBoek>(this.apiurl, user, this.httpOptions).pipe(
-      map(() => user),);
+  UpdateBooks(b: IBoek): Observable<IBoek>{
+    const url = `${this.apiurl}/${b.id}`;
+    return this.http.put<IBoek>(this.apiurl, b, this.httpOptions).pipe(
+      map(() => b), catchError(this.handleError));
   }
 
 
   AddBooks (user: IBoek): Observable<IBoek> {
    
     return this.http.post<IBoek>(this.apiurl, user, this.httpOptions).pipe(
-      tap(data => console.log(data)),
+      tap(data => console.log(data)),catchError(this.handleError)
+      );
 
-    );
+  
 }
 
 

@@ -1,13 +1,31 @@
-
-<h1><b>FETCH</b></h1>
-
-<input type="number" class="form-control" [(ngModel)] = 'fetchId' placeholder="Enter User ID to fetch" />
-<button class="btn btn-info" (click)= 'GetById()'>Fetch user</button>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
+
+<p></p>
+
+<div class="w3-container w3-black">
+  <h2>FETCH BOOK</h2>
+</div>
+<p></p>
+
+<div class="fetch">
+<input type="number" class="form-control" class="w3-input" [(ngModel)] = 'fetchId' placeholder="Enter User ID to fetch" /><p>
+<button class="btn btn-info" (click)= 'GetById()'  class="w3-btn w3-gray">FETCH BOOK</button>
+
+<p></p>
 
 <table class ="table" border="2px solid black">
-    <tr>
+  <tr>
+<th>ID</th>
+<th>TITLE</th>
+<th>CATEGORIES</th>
+<th>ISBN</th>
+<th>SHORT DESCRIPTION</th>
+
+  </tr>  
+  
+  <tr>
       <td>
         {{boeks.id}}
       </td>
@@ -17,104 +35,72 @@
       <td>
         {{boeks.categories}}
       </td>
+      <td>
+        {{boeks.isbn}}
+      </td>
+      <td>
+        {{boeks.shortDescription}}
+      </td>
     </tr>
   </table>
 
 <p></p>
 
+</div>
 
-
-<h1><b>DELETE</b></h1>
-<br><br>
-
-<table class ="table table-striped table-responsive">
-  <tr *ngFor="let b of boeks2">
-    <td>
-      {{b.id}}
-    </td>
-    <td>
-      {{b.title}}
-    </td>
-    <td>
-      {{b.categories}}
-    </td>
-
-  </tr>
-</table>
-
-<input class= "form-control" type="number" [(ngModel)]='idtodelete' placeholder="Enter Id to delete User" />
-
-<button class= 'btn btn-info' (click)='DeleteBooks()'>Delete User </button>
-
+<div class="w3-container w3-black">
+  <h2>DELETE BOOK</h2>
+</div>
+<p></p>
+<div class="delete">
+<input  type="number"  class= "form-control" class="w3-input" [(ngModel)]='idtodelete' placeholder="Enter Id to delete User" /><br> 
+<button class= 'btn btn-info' (click)='DeleteBooks()' class="w3-btn w3-gray">DELETE BOOK </button>
+</div>
 
 
 <p></p>
-<h1><b>UPDATE</b></h1>
 
-<br><br>
-
-    <input type="number" class="form-control" [(ngModel)] = 'idtoUpdate' placeholder="Enter User ID to update" />
-    <button class="btn btn-info" (click)= 'UpdateBooks()'>Update User</button>
-
-
-
-
-
-
+<div class="w3-container w3-black">
+  <h2>UPDATE BOOK</h2>
+</div>
 <p></p>
-<h1><b>CREATE</b></h1>
+<div class="update">
+    <input type="number" class="form-control"  class="w3-input" [(ngModel)] = 'idtoUpdate' placeholder="Enter User ID to update" /><br>
+    <input type="text" class="form-control" class="w3-input" [(ngModel)] = 'status' placeholder="status" /><br>
+    <input type="number" class="form-control" class="w3-input" [(ngModel)] = 'pages' placeholder="pages" /><br> 
+    <input type="text" class="form-control" class="w3-input" [(ngModel)] = 'title' placeholder="title" /><br> 
+    <input type="text" class="form-control" class="w3-input" [(ngModel)] = 'shortDes' placeholder="short description" /><br> 
+    <input type="text" class="form-control" class="w3-input" [(ngModel)] = 'longDes' placeholder="long description" /><br> 
+    <input type="text" class="form-control" class="w3-input" [(ngModel)] = 'categories' placeholder="categories" /><br> 
+    <input type="text" class="form-control" class="w3-input" [(ngModel)] = 'isbn' placeholder="isbn" /><br> 
+    <input type="text" class="form-control" class="w3-input" [(ngModel)] = 'thumbURL' placeholder="thumbnail url" /><br> 
+    <button class="btn btn-info" class="w3-btn w3-gray" (click)= 'UpdateBooks()'>UPDATE BOOK</button>
+</div>
 
 
-<form [formGroup]='userFormGroup' (ngSubmit)='AddBooks()'  novalidate >
-    <input class= "form-control" type="text" formControlName='title' placeholder="Enter title"   />
-    <input class= "form-control" type="text" formControlName='categories' placeholder="Enter category"   />
-    <input class= "form-control" type="text" formControlName='pages' placeholder="Enter pages"   />
-
-  
-    <button class= 'btn btn-info'>Add User</button></form>
-
-    <table class ="table">
-      <tr >
-        <td>
-          {{boeks.id}}
-        </td>
-        <td>
-          {{boeks.title}}
-        </td>
-        <td>
-          {{boeks.categories}}
-        </td>
-        <td>
-          {{boeks.pages}}
-        </td>
-        <td>
-          {{boeks.status}}
-        </td>
-        
-      </tr>
-    </table>
-
-
-    <br><br>
-    <table class ="table table-striped table-responsive2">
-      <tr *ngFor="let u of boeks2">
-        <td>
-          {{u.id}}
-        </td>
-        <td>
-          {{u.title}}
-        </td>
-        <td>
-          {{u.categories}}
-        </td>
-        <td>
-            {{u.pages}}
-          </td>
-    
-
-      </tr>
-    </table>
     <p></p>
-    <br><br>
-    <button class="btn btn-danger" [routerLink]="['/home']" routerLinkActive="router-link-active" > Go Back</button>
+
+
+
+
+    <div class="w3-container w3-black">
+      <h2>CREATE BOOK</h2>
+      <p></p>
+    </div>
+<form [formGroup]='userFormGroup' (ngSubmit)='AddBooks()' class="w3-container" novalidate ><br> 
+    <input class= "form-control" class="w3-input" type="text" formControlName='title' placeholder="Enter title"   />
+    <input class= "form-control" class="w3-input"type="text" formControlName='categories' placeholder="Enter categories"   />
+    <input class= "form-control" class="w3-input"type="text" formControlName='isbn' placeholder="Enter isbn"   />
+    <input class= "form-control" class="w3-input"type="text" formControlName='longDes' placeholder="Enter long description"   />
+    <input class= "form-control" class="w3-input"type="text" formControlName='shortDes' placeholder="Enter short description"   />
+    <input class= "form-control" class="w3-input"type="text" formControlName='pages' placeholder="Enter pages"   />
+    <input class= "form-control" class="w3-input"type="text" formControlName='status' placeholder="Enter status"   />
+    <input class= "form-control" class="w3-input"type="text" formControlName='thumbnailURL' placeholder="Enter thumbnail URL"/><br>
+  <button class= 'btn btn-info'  class="w3-btn w3-gray">ADD BOOK</button></form>
+
+
+  <p></p>
+
+
+
 <router-outlet></router-outlet>

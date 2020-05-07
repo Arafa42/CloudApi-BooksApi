@@ -14,18 +14,30 @@ boeksTest:IBoek;
 boeks2:IBoek[]=[];
 displayData: boolean;
 userFormGroup: FormGroup;
+public error: any; 
 
-  fetchId : number = 1;
-  idtodelete: number = 0;
-  idtoUpdate: number = 0;
+  fetchId : number;
+  idtodelete: number;
+  idtoUpdate: number;
+  status: string = "";
+  title: string = "";
+  shortDes: string = "";
+  longDes: string = "";
+  isbn: string = "";
+  categories: string = "";
+  thumbURL: string = "";
+  pages: number = 0;
   
   constructor(private boekSvc:BoekenService) { }
 
 
   GetById(){this.boekSvc.GetById(this.fetchId).subscribe(data => {
     this.boeks = data;
-    this.displayData=true;
-    });}
+    this.displayData=true; 
+    }, error => { // second parameter is to listen for error
+      if(this.fetchId != null){
+      alert("ERROR FETCHING BOOK, STATUS CODE : "+error.status);}
+      this.error = error.status;});}
 
 
 
@@ -33,24 +45,40 @@ userFormGroup: FormGroup;
 
       this.boekSvc.DeleteBooks(this.idtodelete).subscribe(data => {
         this.GetBooks();
-      });
+      }, error => { // second parameter is to listen for error
+        if(this.fetchId != null){
+        alert("ERROR DELETING BOOK, STATUS CODE : "+error.status);}
+        this.error = error.status;});
     }
   
     GetBooks(){
-      this.boekSvc.GetBooks().subscribe(data => {
+      this.boekSvc.GetBooks(0).subscribe(data => {
         this.boeks2 = data;
-      });
-    }
+      }, error => { // second parameter is to listen for error
+        alert("ERROR, STATUS CODE : "+error.status);
+        this.error = error.status;}
+        );}
 
 
     UpdateBooks() {
       this.boekSvc.GetById(this.idtoUpdate).subscribe(data => {
         this.boeks = data;
-        this.boeks.status = "UPDATED";
+        this.boeks.title = this.title;
+        this.boeks.shortDescription = this.shortDes;
+        this.boeks.longDescription = this.longDes;
+        this.boeks.isbn = this.isbn;
+        this.boeks.pages = this.pages;
+        this.boeks.categories = this.categories;
+        this.boeks.status = this.status;
+        this.boeks.thumbnailURL = this.thumbURL;
+
+
         this.boekSvc.UpdateBooks(this.boeks).subscribe(data1 => {
           this.GetBooks();
         });
-      });
+      }, error => { // second parameter is to listen for error
+        alert("ERROR UPDATING BOOK, STATUS CODE : "+error.status);
+        this.error = error.status;});
     }
 
 
@@ -58,21 +86,25 @@ userFormGroup: FormGroup;
       this.boekSvc.AddBooks(this.userFormGroup.value).subscribe(data => {
         this.boeks = data;
         console.log(this.boeks);
-      });
+      }, error => { // second parameter is to listen for error
+        alert("ERROR CREATING BOOK, STATUS CODE : "+error.status);
+        this.error = error.status;});
       this.GetAllBooks();
     }
 
 
     GetAllBooks(){
 
-      this.boekSvc.GetBooks().subscribe(boeken => {
+      this.boekSvc.GetBooks(0).subscribe(boeken => {
 
         this.boeks2.length = boeken.length;
       for (let i = 0; i < boeken.length; i++) {
         this.boeks2[i] = boeken[i];
       }
     
-      });
+      }, error => { // second parameter is to listen for error
+        alert("ERROR, STATUS CODE : "+error.status);
+        this.error = error.status;});
       
     }
 
@@ -84,7 +116,12 @@ userFormGroup: FormGroup;
       {
         title : new FormControl(''),
         categories : new FormControl(''),
-        pages:new FormControl('')
+        pages:new FormControl(''),
+        isbn:new FormControl(''),
+        shortDes:new FormControl(''),
+        longDes:new FormControl(''),
+        status:new FormControl(''),
+        thumbnailURL:new FormControl('')
       },
     );
 
