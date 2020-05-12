@@ -15,7 +15,7 @@ namespace BooksApi
 
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
-
+        public DbSet<Chapters> Chapters { get; set; }
         public DbSet<BooksAuthor> BooksAuthor { get; set; }
 
 

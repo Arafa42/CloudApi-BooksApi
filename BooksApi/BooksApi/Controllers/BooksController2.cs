@@ -110,7 +110,7 @@ namespace BooksApi.Controllers
         {
 
             var book = context.Books
-                //.Include(d => d.Authors)
+                .Include(d => d.chapters)
                 .SingleOrDefault(d => d.Id == id);
 
 

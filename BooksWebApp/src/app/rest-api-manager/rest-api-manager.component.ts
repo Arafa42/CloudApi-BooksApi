@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ErrorHandler } from '@angular/core';
 import { BoekenService, IBoek } from '../boeken.service';
 import { FormGroup, FormControl } from '@angular/forms';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-rest-api-manager',
@@ -26,6 +27,7 @@ public error: any;
   isbn: string = "";
   categories: string = "";
   thumbURL: string = "";
+  pubDate: string = "";
   pages: number = 0;
   
   constructor(private boekSvc:BoekenService) { }
@@ -36,7 +38,7 @@ public error: any;
     this.displayData=true; 
     }, error => { // second parameter is to listen for error
       if(this.fetchId != null){
-      alert("ERROR FETCHING BOOK, STATUS CODE : "+error.status);}
+      alert("ERROR FETCHING BOOK, STATUS CODE : " + error.status + "\n" + JSON.stringify(error.error));}
       this.error = error.status;});}
 
 
@@ -47,7 +49,7 @@ public error: any;
         this.GetBooks();
       }, error => { // second parameter is to listen for error
         if(this.fetchId != null){
-        alert("ERROR DELETING BOOK, STATUS CODE : "+error.status);}
+        alert("ERROR DELETING BOOK, STATUS CODE : " + error.status + "\n" + JSON.stringify(error.error));}
         this.error = error.status;});
     }
   
@@ -55,7 +57,7 @@ public error: any;
       this.boekSvc.GetBooks(0).subscribe(data => {
         this.boeks2 = data;
       }, error => { // second parameter is to listen for error
-        alert("ERROR, STATUS CODE : "+error.status);
+        alert("ERROR, STATUS CODE : "+error.status + "\n" + JSON.stringify(error.error));
         this.error = error.status;}
         );}
 
@@ -71,13 +73,15 @@ public error: any;
         this.boeks.categories = this.categories;
         this.boeks.status = this.status;
         this.boeks.thumbnailURL = this.thumbURL;
+        this.boeks.publishedDate = this.pubDate;
+
 
 
         this.boekSvc.UpdateBooks(this.boeks).subscribe(data1 => {
           this.GetBooks();
         });
       }, error => { // second parameter is to listen for error
-        alert("ERROR UPDATING BOOK, STATUS CODE : "+error.status);
+        alert("ERROR UPDATING BOOK, STATUS CODE : "+error.status + "\n" + JSON.stringify(error.error));
         this.error = error.status;});
     }
 
@@ -87,7 +91,7 @@ public error: any;
         this.boeks = data;
         console.log(this.boeks);
       }, error => { // second parameter is to listen for error
-        alert("ERROR CREATING BOOK, STATUS CODE : "+error.status);
+        alert("ERROR CREATING BOOK, STATUS CODE : "+ error.status + "\n" + JSON.stringify(error.error));
         this.error = error.status;});
       this.GetAllBooks();
     }
@@ -103,7 +107,7 @@ public error: any;
       }
     
       }, error => { // second parameter is to listen for error
-        alert("ERROR, STATUS CODE : "+error.status);
+        alert("ERROR, STATUS CODE : "+error.status + "\n" + JSON.stringify(error.error));
         this.error = error.status;});
       
     }
@@ -121,7 +125,8 @@ public error: any;
         shortDes:new FormControl(''),
         longDes:new FormControl(''),
         status:new FormControl(''),
-        thumbnailURL:new FormControl('')
+        thumbnailURL:new FormControl(''),
+        publishedDate:new FormControl('')
       },
     );
 

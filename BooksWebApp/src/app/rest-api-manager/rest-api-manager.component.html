@@ -22,6 +22,8 @@
 <th>CATEGORIES</th>
 <th>ISBN</th>
 <th>SHORT DESCRIPTION</th>
+<th>STATUS</th>
+<th>PUB. DATE</th>
 
   </tr>  
   
@@ -40,6 +42,12 @@
       </td>
       <td>
         {{boeks.shortDescription}}
+      </td>
+      <td>
+        {{boeks.status}}
+      </td>
+      <td>
+        {{boeks.publishedDate}}
       </td>
     </tr>
   </table>
@@ -74,6 +82,7 @@
     <input type="text" class="form-control" class="w3-input" [(ngModel)] = 'categories' placeholder="categories" /><br> 
     <input type="text" class="form-control" class="w3-input" [(ngModel)] = 'isbn' placeholder="isbn" /><br> 
     <input type="text" class="form-control" class="w3-input" [(ngModel)] = 'thumbURL' placeholder="thumbnail url" /><br> 
+    <input type="text" class="form-control" class="w3-input" [(ngModel)] = 'pubDate' placeholder="published date" /><br> 
     <button class="btn btn-info" class="w3-btn w3-gray" (click)= 'UpdateBooks()'>UPDATE BOOK</button>
 </div>
 
@@ -90,6 +99,7 @@
 <form [formGroup]='userFormGroup' (ngSubmit)='AddBooks()' class="w3-container" novalidate ><br> 
     <input class= "form-control" class="w3-input" type="text" formControlName='title' placeholder="Enter title"   />
     <input class= "form-control" class="w3-input"type="text" formControlName='categories' placeholder="Enter categories"   />
+    <input class= "form-control" class="w3-input"type="text" formControlName='publishedDate' placeholder="Enter publish date"   />
     <input class= "form-control" class="w3-input"type="text" formControlName='isbn' placeholder="Enter isbn"   />
     <input class= "form-control" class="w3-input"type="text" formControlName='longDes' placeholder="Enter long description"   />
     <input class= "form-control" class="w3-input"type="text" formControlName='shortDes' placeholder="Enter short description"   />

@@ -21,7 +21,7 @@ export class BoekenService {
 
 
   private handleError(error: any) {
-    console.error(error);                                       //Created a function to handle and log errors, in case
+    console.error(error);                               
     return throwError(error);
   }
 
