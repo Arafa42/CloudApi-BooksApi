@@ -17,7 +17,7 @@ displayData: boolean;
 userFormGroup: FormGroup;
 public error: any; 
 
-  fetchId : number;
+  fetchId : number = null;
   idtodelete: number;
   idtoUpdate: number;
   status: string = "";
@@ -38,18 +38,20 @@ public error: any;
     this.displayData=true; 
     }, error => { // second parameter is to listen for error
       if(this.fetchId != null){
-      alert("ERROR FETCHING BOOK, STATUS CODE : " + error.status + "\n" + JSON.stringify(error.error));}
+      alert("ERROR FETCHING BOOK, STATUS CODE : " + error.status  +" "+ error.statusText +  "\n" + JSON.stringify(error.error));}
       this.error = error.status;});}
 
 
 
     DeleteBooks() {
 
+
+
       this.boekSvc.DeleteBooks(this.idtodelete).subscribe(data => {
         this.GetBooks();
       }, error => { // second parameter is to listen for error
         if(this.fetchId != null){
-        alert("ERROR DELETING BOOK, STATUS CODE : " + error.status + "\n" + JSON.stringify(error.error));}
+        alert("ERROR DELETING BOOK, STATUS CODE : " + error.status  +" "+ error.statusText + "\n" + JSON.stringify(error.error));}
         this.error = error.status;});
     }
   
@@ -57,7 +59,7 @@ public error: any;
       this.boekSvc.GetBooks(0).subscribe(data => {
         this.boeks2 = data;
       }, error => { // second parameter is to listen for error
-        alert("ERROR, STATUS CODE : "+error.status + "\n" + JSON.stringify(error.error));
+        alert("ERROR, STATUS CODE : "+error.status  +" "+ error.statusText +  "\n" + JSON.stringify(error.error));
         this.error = error.status;}
         );}
 
@@ -81,7 +83,7 @@ public error: any;
           this.GetBooks();
         });
       }, error => { // second parameter is to listen for error
-        alert("ERROR UPDATING BOOK, STATUS CODE : "+error.status + "\n" + JSON.stringify(error.error));
+        alert("ERROR UPDATING BOOK, STATUS CODE : " +error.status+ " "+ error.statusText +  "\n" + JSON.stringify(error.error));
         this.error = error.status;});
     }
 
@@ -91,7 +93,7 @@ public error: any;
         this.boeks = data;
         console.log(this.boeks);
       }, error => { // second parameter is to listen for error
-        alert("ERROR CREATING BOOK, STATUS CODE : "+ error.status + "\n" + JSON.stringify(error.error));
+        alert("ERROR CREATING BOOK, STATUS CODE : " +error.status+" "+ error.statusText +  "\n" + JSON.stringify(error.error));
         this.error = error.status;});
       this.GetAllBooks();
     }
@@ -107,7 +109,7 @@ public error: any;
       }
     
       }, error => { // second parameter is to listen for error
-        alert("ERROR, STATUS CODE : "+error.status + "\n" + JSON.stringify(error.error));
+        alert("ERROR, STATUS CODE : " +error.status+" "+ error.statusText +  "\n" + JSON.stringify(error.error));
         this.error = error.status;});
       
     }

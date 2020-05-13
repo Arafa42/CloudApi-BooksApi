@@ -18,6 +18,9 @@ import { BoekenService } from './boeken.service';
 import {TableModule} from 'primeng/table';
 import {DataViewModule} from 'primeng/dataview';
 import { ExternApiDetailsComponent } from './extern-api-details/extern-api-details.component';
+import { ExternApiService } from './extern-api.service';
+import { AuthService } from './auth.service';
+import { TokenService } from './token.service';
 
 
 
@@ -58,7 +61,10 @@ import { ExternApiDetailsComponent } from './extern-api-details/extern-api-detai
   
   providers: [
 
-  BoekenService
+  BoekenService,
+  ExternApiService,
+  AuthService,
+  TokenService
 
   ],
   bootstrap: [AppComponent]

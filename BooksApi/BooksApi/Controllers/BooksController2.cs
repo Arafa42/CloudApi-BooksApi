@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using BooksApi.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -94,7 +95,7 @@ namespace BooksApi.Controllers
             return query.ToList();
         }
 
-
+        [Authorize]
         [HttpPost]
         public IActionResult CreateBook([FromBody] Book newBook)
         {
@@ -109,6 +110,7 @@ namespace BooksApi.Controllers
         }
 
 
+       
         [Route("{id}")]
         [HttpGet]
 
@@ -170,7 +172,7 @@ namespace BooksApi.Controllers
         //}
 
 
-
+        [Authorize]
         [Route("{id}")]
         [HttpDelete]
 
@@ -188,7 +190,7 @@ namespace BooksApi.Controllers
 
         }
 
-
+        [Authorize]
         [HttpPut]
 
         public IActionResult UpdateBook([FromBody] Book updateBook)

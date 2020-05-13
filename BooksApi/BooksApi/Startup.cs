@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace BooksApi
 {
@@ -28,6 +29,29 @@ namespace BooksApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+         
+          
+            // 1. Add Authentication Services
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = "https://cloudapi2020.eu.auth0.com/";
+                options.Audience = "https://localhost:44354";
+            });
+
+
+
+
+
+
+
+
+
+
             services.AddDbContext<LibraryContext>(
 
                 options => options.UseSqlServer(
@@ -61,7 +85,15 @@ namespace BooksApi
                 app.UseDeveloperExceptionPage();
             }
 
-        
+          
+
+            app.UseStaticFiles();
+
+            // 2. Enable authentication middleware
+            app.UseAuthentication();
+
+      
+
 
             DBInitializer.Initialize(libContext);
 
