@@ -46,6 +46,12 @@ namespace BooksApi.Controllers
 
                 switch (sort)
                 {
+                    case "id":
+                        if (dir == "asc")
+                        { query = query.OrderBy(d => d.Id); }
+                        else if (dir == "desc")
+                        { query = query.OrderByDescending(d => d.Id); }
+                        break;
                     case "title":  
                         if(dir == "asc")
                         { query = query.OrderBy(d => d.Title); }

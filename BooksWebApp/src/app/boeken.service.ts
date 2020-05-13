@@ -26,9 +26,10 @@ export class BoekenService {
   }
 
 
-GetBooks(page:number=0){
-return this.http.get<IBoek[]>(`https://localhost:44354/api/v1/books?page=${page}&length=10`)
+GetBooks(page:number=0,sort:string="",dir:string=""){
+return this.http.get<IBoek[]>(`https://localhost:44354/api/v1/books?page=${page}&length=10&sort=${sort}&dir=${dir}`)
 }
+
 
 
 GetById (id: number): Observable<IBoek> {

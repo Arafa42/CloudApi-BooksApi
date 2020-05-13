@@ -17,13 +17,30 @@ fetchId : number = 1;
 page: number = 0;
 
 
+
+sort = [
+  {name: "id"},
+  {name: "title"},
+  {name: "category"},
+  {name: "isbn"},
+  {name: "page"},
+
+];
+selectedSortValue = "id";
+
+dir = [
+  {name: "asc"},
+  {name: "desc"},
+];
+selectedDirValue = "asc";
+
   constructor(private boekSvc:BoekenService) {     
   }
 
 
 
 
-  GetBooks(){this.boekSvc.GetBooks(this.page).subscribe(boeken => {
+  GetBooks(){this.boekSvc.GetBooks(this.page,this.selectedSortValue,this.selectedDirValue).subscribe(boeken => {
 
     this.boeks.length = boeken.length;
     this.boekUrl.length = boeken.length;

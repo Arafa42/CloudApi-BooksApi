@@ -21,7 +21,7 @@ namespace BooksApi
         public string ISBN { get; set; } 
 
         [Required]
-        [RegularExpression(@"^(?:[0-9][0-9]{0,4}(?:\.\d{1,2})?|100000|100000.00)$", ErrorMessage ="Only numbers less than a million allowed")]
+        [RegularExpression(@"^(?:[0-9][0-9]{0,4}(?:\.\d{1,2})?|100000|100000.00)$", ErrorMessage ="Only numbers less than 100.000 allowed")]
         public string Pages { get; set; }
         
          
@@ -29,10 +29,7 @@ namespace BooksApi
         [RegularExpression(@"^[a-zA-Z''-'\s]{1,999}$",
         ErrorMessage = "999+ Characters are not allowed.")]
         public string Categories { get; set; }
-
-      
     
-        //public Author Authors { get; set; }
 
         [RegularExpression(@"([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))", ErrorMessage = "Date doesnt match yyyy-MM-dd format")]
         public string PublishedDate { get; set; }

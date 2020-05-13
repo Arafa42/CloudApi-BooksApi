@@ -3,12 +3,21 @@
 <p></p>
 
 
-
-
-
+  <div class="sort">
+  <select [(ngModel)]="selectedSortValue">
+     <option *ngFor="let s of sort" value="{{s.name}}">{{s.name}}</option>
+  </select>
+<select [(ngModel)]="selectedDirValue">
+    <option *ngFor="let d of dir" value="{{d.name}}">{{d.name}}</option>
+ </select>
+<p></p>
+  </div>
+ <div class="pgButton">
+    <button (click) = GetBooks() class="w3-btn w3-gray">SORT DATA</button>
+ </div>
    
-
-
+  <p></p>
+  
     <p-table [value]="boeks">
         <ng-template pTemplate="header">
             <tr>
