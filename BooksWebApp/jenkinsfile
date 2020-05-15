@@ -22,7 +22,6 @@ pipeline {
         stage('Deploy playbook') {
             steps {
             node('ubuntu'){
-                sh 'cd ..'
                 sh 'pwd'
                 sh 'cd /AnsibleDeployment'
                 sh 'pwd'
