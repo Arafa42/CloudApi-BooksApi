@@ -22,10 +22,15 @@ pipeline {
         stage('Deploy playbook') {
             steps {
             node('ubuntu'){
-                sh 'pwd'
-                sh 'cd /AnsibleDeployment'
-                sh 'pwd'
-                sh 'ansible-playbook testDeployment.yml --ask-become-pass'
+            
+                sh script:'''
+                   #!/bin/bash
+                   echo "This is start $(pwd)"
+                   cd /home/arafa/Desktop/AnsibleDeployment
+                   echo "This is $(pwd)"
+                   ansible-playbook testDeployment.yml --ask-become-pass
+                  '''
+                  
             }
             }
         }             
