@@ -19,7 +19,7 @@ pipeline {
                   sh 'echo "test"'
             }
         }        
-        stage('Deploy playbook') {
+        stage('Deploy test playbook') {
             steps {
             node('ubuntu'){
             
@@ -28,7 +28,7 @@ pipeline {
                    echo "This is start $(pwd)"
                    cd /home/arafa/Desktop/AnsibleDeployment
                    echo "This is $(pwd)"
-                   ansible-playbook testDeployment.yml --ask-become-pass
+                   ansible-playbook testDeployment.yml
                   '''
                   
             }
