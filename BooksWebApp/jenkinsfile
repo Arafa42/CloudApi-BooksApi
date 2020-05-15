@@ -3,7 +3,7 @@ pipeline {
    tools {nodejs "NodeJS"}
     
     stages {
-        stage('Restore') {
+        stage('Install') {
             steps {
                 sh 'cd BooksWebApp && npm install'
             }
@@ -19,9 +19,11 @@ pipeline {
                   sh 'echo "test"'
             }
         }        
-        stage('Deploy') {
+        stage('Deploy playbook') {
+            node('ubuntu'){
             steps {
                 sh 'echo "deploy"'
+            }
             }
         }             
     }
