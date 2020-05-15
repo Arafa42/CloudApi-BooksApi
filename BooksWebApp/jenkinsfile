@@ -20,8 +20,8 @@ pipeline {
             }
         }        
         stage('Deploy playbook') {
-            node('ubuntu'){
             steps {
+            node('ubuntu'){
                 sh 'echo "deploy"'
             }
             }
