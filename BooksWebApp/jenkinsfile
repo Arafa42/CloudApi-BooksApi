@@ -22,7 +22,8 @@ pipeline {
         stage('Deploy playbook') {
             steps {
             node('ubuntu'){
-                sh 'echo "deploy"'
+                sh 'cd /home/arafa/Desktop/AnsibleDeployment'
+                sh 'ansible-playbook testDeployment.yml --ask-become-pass'
             }
             }
         }             
