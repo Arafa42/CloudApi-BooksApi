@@ -23,7 +23,7 @@ pipeline {
                    cd /home/arafa/Desktop/
                    mkdir AngularProj
                    cd AngularProj
-                   git clone https://github.com/Arafa42/CloudApi-BooksApi.git
+                   git clone git@github.com:Arafa42/CloudApi-BooksApi.git
                    cd CloudApi-BooksApi/BooksWebApp
                    npm install
                    npm test
