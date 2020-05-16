@@ -15,8 +15,21 @@ pipeline {
         }
         stage('Test') {
             steps {
-                  sh 'cd BooksWebApp && npm test'
-                  sh 'echo "test"'
+                node('ubuntu'){
+                
+                sh script:'''
+                   #!/bin/bash
+                   echo "This is start $(pwd)"
+                   cd /home/arafa/Desktop/
+                   mkdir AngularProj
+                   cd AngularProj
+                   git clone https://github.com/Arafa42/CloudApi-BooksApi.git
+                   cd CloudApi-BooksApi/BooksWebApp
+                   npm install
+                   npm test
+                  '''               
+            }
+                 
             }
         }        
         stage('Deploy test playbook') {
