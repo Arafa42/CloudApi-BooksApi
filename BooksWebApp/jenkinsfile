@@ -21,6 +21,7 @@ pipeline {
                    #!/bin/bash
                    echo "This is start $(pwd)"
                    cd /home/arafa/Desktop/
+                   rm -r AngularProj
                    mkdir AngularProj
                    cd AngularProj
                    git clone git@github.com:Arafa42/CloudApi-BooksApi.git
