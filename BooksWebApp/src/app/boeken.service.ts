@@ -49,7 +49,7 @@ return this.http.get<IBoek[]>(`https://localhost:44354/api/v1/books?page=${page}
 
 
 
-GetById (id: number): Observable<IBoek> {
+GetById (id: number=0): Observable<IBoek> {
   const url = `${this.apiurl}/${id}`;
   return this.http.get<IBoek>(url).pipe(
     catchError(this.handleError)
