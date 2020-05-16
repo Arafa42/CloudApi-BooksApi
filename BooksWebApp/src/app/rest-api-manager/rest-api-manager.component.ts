@@ -10,7 +10,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class RestApiManagerComponent implements OnInit {
 
-boeks:IBoek;
+boeks:IBoek = {  id: 0,title: "",isbn: "",pages: 0,categories: "",publishedDate: "",thumbnailURL: "",shortDescription: "",longDescription: "",status: ""};
 boeksTest:IBoek;
 boeks2:IBoek[]=[];
 displayData: boolean;
