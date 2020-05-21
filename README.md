@@ -1,2 +1,2 @@
 # CloudApi-BooksApi
-DevOps test
+Cloud-API's project & DevOps project (partial).
