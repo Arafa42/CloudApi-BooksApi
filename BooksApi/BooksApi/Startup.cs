@@ -54,7 +54,7 @@ namespace BooksApi
 
             services.AddDbContext<LibraryContext>(
 
-                options => options.UseSqlServer(
+                options => options.UseMySQL(
                     
                     Configuration.GetConnectionString("DefaultConnection")
                     

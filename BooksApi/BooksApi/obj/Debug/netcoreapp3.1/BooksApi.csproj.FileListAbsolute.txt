@@ -64,5 +64,17 @@ C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\ne
 C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\MySql.Data.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\Zstandard.Net.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\MySql.Data.EntityFrameworkCore.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\obj\Debug\netcoreapp3.1\BooksApi.csproj.CoreCompileInputs.cache
 C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\obj\Debug\netcoreapp3.1\BooksApi.MvcApplicationPartsAssemblyInfo.cache
