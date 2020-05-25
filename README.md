@@ -69,4 +69,11 @@ URL'S
  
  API URL : https://cloudapi-booksapi.ew.r.appspot.com/api/v1/books/
  
+ SPECIFIC BOOK URL (example book 42) :  https://cloudapi-booksapi.ew.r.appspot.com/api/v1/books/42
+ 
+ AUTHOR URL (example author 10) :  https://cloudapi-booksapi.ew.r.appspot.com/api/v1/authors/10
+ 
+ PAGING AND SORTING WITH DIRECTION URL : https://cloudapi-booksapi.ew.r.appspot.com/api/v1/books?page=0&length=100&sort=category&dir=asc
+ 
+ BOOKS OF SPECIFIC AUTHOR URL (example author 1) : https://cloudapi-booksapi.ew.r.appspot.com/api/v1/authors/1/books
  
