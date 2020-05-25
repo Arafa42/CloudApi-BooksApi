@@ -3,14 +3,14 @@
 This project contains a .NET CORE API with an Angular application about books (mostly developer books about programming languages).
 
 ------------------------------------------------------------------------------------                                 
-       db         88888888ba   88  
-      d88b        88      "8b  88  
-     d8'`8b       88      ,8P  88  
-    d8'  `8b      88aaaaaa8P'  88  
-   d8YaaaaY8b     88""""""'    88  
-  d8""""""""8b    88           88  
- d8'        `8b   88           88  
-d8'          `8b  88           88                                   
+       A         88888888ba   88  
+      AAAA        88      "8b  88  
+     AA'`AA       88      ,8P  88  
+    AA'  `AA      88aaaaaa8P'  88  
+   AAAAAAAAAA     88""""""'    88  
+  AA""""""""AA    88           88  
+ AA'        `AA   88           88  
+AA'          `AA  88           88                                   
 ------------------------------------------------------------------------------------
 
 The .NET CORE API contains 2 controllers : 
