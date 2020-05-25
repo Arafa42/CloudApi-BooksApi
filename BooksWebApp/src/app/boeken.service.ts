@@ -27,7 +27,7 @@ auths : boolean;
 
 //}
 
-apiurl: string = "https://localhost:44354/api/v1/books";
+apiurl: string = "https://cloudapi-booksapi.ew.r.appspot.com/api/v1/books";
 headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');    
 httpOptions = {
 headers: this.headers
@@ -44,7 +44,7 @@ headers: this.headers
 
 
 GetBooks(page:number=0,sort:string="",dir:string=""){
-return this.http.get<IBoek[]>(`https://localhost:44354/api/v1/books?page=${page}&length=10&sort=${sort}&dir=${dir}`)
+return this.http.get<IBoek[]>(`https://cloudapi-booksapi.ew.r.appspot.com/api/v1/books?page=${page}&length=10&sort=${sort}&dir=${dir}`)
 }
 
 
@@ -59,7 +59,7 @@ GetById (id: number=0): Observable<IBoek> {
 
   DeleteBooks(id: number): Observable<IBoek> {
 
-    if(this.auths){this.httpOptions.headers = new HttpHeaders().set('Authorization','Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZQRlBoUmhxN2xaV1FzRDFCQjRWRyJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkYXBpMjAyMC5ldS5hdXRoMC5jb20vIiwic3ViIjoiWmY1aGw2NmxnRzZUWDN1NEZoemxUdktkWFpZUDJMbEFAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzU0IiwiaWF0IjoxNTkwMDA3ODI4LCJleHAiOjE1OTAwOTQyMjgsImF6cCI6IlpmNWhsNjZsZ0c2VFgzdTRGaHpsVHZLZFhaWVAyTGxBIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.gPFjAGIRULuOQMEAIFxC66jXYhsvBNh9QDgX9I6X1YF1h-KNtnGvVsnT9G9KUf7DsDxw6aBnuqIbOrnPPLSXos-Spe0kyaki0S2yqTFGZ3RjlZKoAeTRPivcc_3144N5K2SLx9It7J2SwYZ9Gz470j0T6pIaMP2LabE11L9puGYUkPZ4prbeLCo6W3fBAXrJinK5FgfAgbHt4o8M5l-6rwWuJxTmiYN0J5jBsUTlOEiD5DwUyJpwxCuIePO4VpcAcLdXv7OJ8j2g6nLAWupI2hHhPQg2ia7yrl0TyB5633dGakb07l8rB9t4QXYrEz2npeoVY3AeBkZWoE_51weRhw').set('Content-Type', 'application/json').set('Accept', 'application/json');      }
+    if(this.auths){this.httpOptions.headers = new HttpHeaders().set('Authorization','Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZQRlBoUmhxN2xaV1FzRDFCQjRWRyJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkYXBpMjAyMC5ldS5hdXRoMC5jb20vIiwic3ViIjoiWmY1aGw2NmxnRzZUWDN1NEZoemxUdktkWFpZUDJMbEFAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzU0IiwiaWF0IjoxNTkwMzQ5ODQ3LCJleHAiOjE1OTA0MzYyNDcsImF6cCI6IlpmNWhsNjZsZ0c2VFgzdTRGaHpsVHZLZFhaWVAyTGxBIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.qWEkFTF8B7C8ZUxNs39yAr7j0fwo7_m3ZoSLLkAzpRB0Ksd1lkF4sNNuh4mqtTK8R18hYotT_VAcBFIeclElF9iUEZE4hMYm-_m-j67LtS6neOofcSbYdndM3zSYEtkowUlHHXTSQLJsEpo3cdTV8NGH8UL0gAq-easUlELO6LeCpk-D-9sSmJXLOHR0asTpoX7Cg3Sl4RPKC-6JLM-wkPqmo3XCKXAvhN3lEJ8s9B_6VntCbCNksA_lyedyNVUfvjLegGOj22W_wj-bOFRwKsBvrFwgC_KDzVxkBjRgTvHE1MfMuN-kjcHszvCdxrGS14-hgV0d0oMCSZC_49TQkw').set('Content-Type', 'application/json').set('Accept', 'application/json');      }
     else{
       this.httpOptions.headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');    
     }
@@ -75,7 +75,7 @@ GetById (id: number=0): Observable<IBoek> {
 
   UpdateBooks(b: IBoek): Observable<IBoek>{
     
-    if(this.auths){this.httpOptions.headers = new HttpHeaders().set('Authorization','Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZQRlBoUmhxN2xaV1FzRDFCQjRWRyJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkYXBpMjAyMC5ldS5hdXRoMC5jb20vIiwic3ViIjoiWmY1aGw2NmxnRzZUWDN1NEZoemxUdktkWFpZUDJMbEFAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzU0IiwiaWF0IjoxNTkwMDA3ODI4LCJleHAiOjE1OTAwOTQyMjgsImF6cCI6IlpmNWhsNjZsZ0c2VFgzdTRGaHpsVHZLZFhaWVAyTGxBIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.gPFjAGIRULuOQMEAIFxC66jXYhsvBNh9QDgX9I6X1YF1h-KNtnGvVsnT9G9KUf7DsDxw6aBnuqIbOrnPPLSXos-Spe0kyaki0S2yqTFGZ3RjlZKoAeTRPivcc_3144N5K2SLx9It7J2SwYZ9Gz470j0T6pIaMP2LabE11L9puGYUkPZ4prbeLCo6W3fBAXrJinK5FgfAgbHt4o8M5l-6rwWuJxTmiYN0J5jBsUTlOEiD5DwUyJpwxCuIePO4VpcAcLdXv7OJ8j2g6nLAWupI2hHhPQg2ia7yrl0TyB5633dGakb07l8rB9t4QXYrEz2npeoVY3AeBkZWoE_51weRhw').set('Content-Type', 'application/json').set('Accept', 'application/json');      }
+    if(this.auths){this.httpOptions.headers = new HttpHeaders().set('Authorization','Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZQRlBoUmhxN2xaV1FzRDFCQjRWRyJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkYXBpMjAyMC5ldS5hdXRoMC5jb20vIiwic3ViIjoiWmY1aGw2NmxnRzZUWDN1NEZoemxUdktkWFpZUDJMbEFAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzU0IiwiaWF0IjoxNTkwMzQ5ODQ3LCJleHAiOjE1OTA0MzYyNDcsImF6cCI6IlpmNWhsNjZsZ0c2VFgzdTRGaHpsVHZLZFhaWVAyTGxBIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.qWEkFTF8B7C8ZUxNs39yAr7j0fwo7_m3ZoSLLkAzpRB0Ksd1lkF4sNNuh4mqtTK8R18hYotT_VAcBFIeclElF9iUEZE4hMYm-_m-j67LtS6neOofcSbYdndM3zSYEtkowUlHHXTSQLJsEpo3cdTV8NGH8UL0gAq-easUlELO6LeCpk-D-9sSmJXLOHR0asTpoX7Cg3Sl4RPKC-6JLM-wkPqmo3XCKXAvhN3lEJ8s9B_6VntCbCNksA_lyedyNVUfvjLegGOj22W_wj-bOFRwKsBvrFwgC_KDzVxkBjRgTvHE1MfMuN-kjcHszvCdxrGS14-hgV0d0oMCSZC_49TQkw').set('Content-Type', 'application/json').set('Accept', 'application/json');      }
     else{
       this.httpOptions.headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');    
     }
@@ -90,7 +90,7 @@ GetById (id: number=0): Observable<IBoek> {
    
 
 
-if(this.auths){this.httpOptions.headers = new HttpHeaders().set('Authorization','Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZQRlBoUmhxN2xaV1FzRDFCQjRWRyJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkYXBpMjAyMC5ldS5hdXRoMC5jb20vIiwic3ViIjoiWmY1aGw2NmxnRzZUWDN1NEZoemxUdktkWFpZUDJMbEFAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzU0IiwiaWF0IjoxNTkwMDA3ODI4LCJleHAiOjE1OTAwOTQyMjgsImF6cCI6IlpmNWhsNjZsZ0c2VFgzdTRGaHpsVHZLZFhaWVAyTGxBIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.gPFjAGIRULuOQMEAIFxC66jXYhsvBNh9QDgX9I6X1YF1h-KNtnGvVsnT9G9KUf7DsDxw6aBnuqIbOrnPPLSXos-Spe0kyaki0S2yqTFGZ3RjlZKoAeTRPivcc_3144N5K2SLx9It7J2SwYZ9Gz470j0T6pIaMP2LabE11L9puGYUkPZ4prbeLCo6W3fBAXrJinK5FgfAgbHt4o8M5l-6rwWuJxTmiYN0J5jBsUTlOEiD5DwUyJpwxCuIePO4VpcAcLdXv7OJ8j2g6nLAWupI2hHhPQg2ia7yrl0TyB5633dGakb07l8rB9t4QXYrEz2npeoVY3AeBkZWoE_51weRhw').set('Content-Type', 'application/json').set('Accept', 'application/json');      }
+if(this.auths){this.httpOptions.headers = new HttpHeaders().set('Authorization','Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZQRlBoUmhxN2xaV1FzRDFCQjRWRyJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkYXBpMjAyMC5ldS5hdXRoMC5jb20vIiwic3ViIjoiWmY1aGw2NmxnRzZUWDN1NEZoemxUdktkWFpZUDJMbEFAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzU0IiwiaWF0IjoxNTkwMzQ5ODQ3LCJleHAiOjE1OTA0MzYyNDcsImF6cCI6IlpmNWhsNjZsZ0c2VFgzdTRGaHpsVHZLZFhaWVAyTGxBIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.qWEkFTF8B7C8ZUxNs39yAr7j0fwo7_m3ZoSLLkAzpRB0Ksd1lkF4sNNuh4mqtTK8R18hYotT_VAcBFIeclElF9iUEZE4hMYm-_m-j67LtS6neOofcSbYdndM3zSYEtkowUlHHXTSQLJsEpo3cdTV8NGH8UL0gAq-easUlELO6LeCpk-D-9sSmJXLOHR0asTpoX7Cg3Sl4RPKC-6JLM-wkPqmo3XCKXAvhN3lEJ8s9B_6VntCbCNksA_lyedyNVUfvjLegGOj22W_wj-bOFRwKsBvrFwgC_KDzVxkBjRgTvHE1MfMuN-kjcHszvCdxrGS14-hgV0d0oMCSZC_49TQkw').set('Content-Type', 'application/json').set('Accept', 'application/json');      }
 else{
   this.httpOptions.headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');    
 }

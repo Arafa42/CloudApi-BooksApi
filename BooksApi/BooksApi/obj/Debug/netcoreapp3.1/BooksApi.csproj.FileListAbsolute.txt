@@ -78,3 +78,4 @@ C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\ne
 C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\obj\Debug\netcoreapp3.1\BooksApi.csproj.CoreCompileInputs.cache
 C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\obj\Debug\netcoreapp3.1\BooksApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Arafa\Documents\GitHub\CloudApi-BooksApi\BooksApi\BooksApi\bin\Debug\netcoreapp3.1\app.yaml

@@ -4,10 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="dockerfile.txt" />
-  </ItemGroup>
 
+
+  <ItemGroup>
+    <None Include="app.yaml" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+  
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.4" />
