@@ -3,14 +3,7 @@
 This project contains a .NET CORE API with an Angular application about books (mostly developer books about programming languages).
 
 ------------------------------------------------------------------------------------                                 
-       A         88888888ba   88  
-      AAAA        88      "8b  88  
-     AA'`AA       88      ,8P  88  
-    AA'  `AA      88aaaaaa8P'  88  
-   AAAAAAAAAA     88""""""'    88  
-  AA""""""""AA    88           88  
- AA'        `AA   88           88  
-AA'          `AA  88           88                                   
+API                            
 ------------------------------------------------------------------------------------
 
 The .NET CORE API contains 2 controllers : 
@@ -53,14 +46,7 @@ To create a book 3 properties are required
   - etc...
   
 ------------------------------------------------------------------------------------                                                                                                 
-I8,        8        ,8I  88888888888  88888888ba             db         88888888ba   88888888ba   
-`8b       d8b       d8'  88           88      "8b           d88b        88      "8b  88      "8b  
- "8,     ,8"8,     ,8"   88           88      ,8P          d8'`8b       88      ,8P  88      ,8P  
-  Y8     8P Y8     8P    88aaaaa      88aaaaaa8P'         d8'  `8b      88aaaaaa8P'  88aaaaaa8P'  
-  `8b   d8' `8b   d8'    88"""""      88""""""8b,        d8YaaaaY8b     88""""""'    88""""""'    
-   `8a a8'   `8a a8'     88           88      `8b       d8""""""""8b    88           88           
-    `8a8'     `8a8'      88           88      a8P      d8'        `8b   88           88           
-     `8'       `8'       88888888888  88888888P"      d8'          `8b  88           88           
+WEB APP        
 ------------------------------------------------------------------------------------
  
  We can communicate with our API using an Angular client side web application.
@@ -76,14 +62,7 @@ I8,        8        ,8I  88888888888  88888888ba             db         88888888
  Authentication token is valid for 24 hours. After 24 hours we need to replace the token in the source code!
  
  ------------------------------------------------------------------------------------                                                         
-88        88  88888888ba   88           d8'  ad88888ba   
-88        88  88      "8b  88          d8'  d8"     "8b  
-88        88  88      ,8P  88         ""    Y8,          
-88        88  88aaaaaa8P'  88               `Y8aaaaa,    
-88        88  88""""88'    88                 `"""""8b,  
-88        88  88    `8b    88                       `8b  
-Y8a.    .a8P  88     `8b   88               Y8a     a8P  
- `"Y8888Y"'   88      `8b  88888888888       "Y88888P"                                                                                                                    
+URL'S                                                                                                                  
  ------------------------------------------------------------------------------------
  
  The API is deployed using Google Cloud
